@@ -1,0 +1,78 @@
+.laptop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 20px;
+}
+
+
+/* Style for each laptop item */
+
+.laptop {
+    width: calc(20% - 20px);
+    /* Adjust the width as needed */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    /* Center text inside the laptop item */
+}
+
+
+/* Style for the laptop image */
+
+.laptop img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Style for the laptop name */
+
+.laptop p strong {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+/* Style for the laptop price */
+
+.laptop p {
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+    /* Remove underline from the prices */
+}
+
+.laptop a {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+
+/* Style for the "Xem thêm" button */
+
+#loadMoreBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.show_all {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Style for the "Xem thêm" button on hover */
+
+#loadMoreBtn:hover {
+    background-color: #0056b3;
+}

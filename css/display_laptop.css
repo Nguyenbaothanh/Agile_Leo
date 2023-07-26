@@ -1,0 +1,101 @@
+/* Reset default margins and paddings */
+
+body,
+ul {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Style the navigation */
+
+.vertical.navigation {
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.vertical.navigation h2 {
+    margin-bottom: 20px;
+}
+
+.vertical.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vertical.navigation li {
+    margin-bottom: 10px;
+}
+
+.vertical.navigation a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.vertical.navigation a:hover {
+    background-color: #ddd;
+}
+
+
+/* Style the content */
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Style the table */
+
+table {
+    margin-top: 40px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+
+/* Style the add button */
+
+.add-button {
+    margin-left: 220px;
+    margin-top: 20px;
+}
+
+.add-button button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}

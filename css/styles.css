@@ -1,0 +1,65 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.laptop {
+    width: 400px;
+    /* Adjusted width to fit 4 items per row */
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.laptop img {
+    width: 100%;
+    max-width: 200px;
+    /* Adjust the maximum width of the image as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.laptop p {
+    margin: 0;
+}
+
+.laptop a {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+
+/* CSS cho container chứa các liên kết phân trang */
+
+
+/* CSS cho container chứa các liên kết phân trang */
+
+
+/* CSS cho container chứa các liên kết phân trang */
+
+.pagination-container {
+    /* Change to "flex" to make pagination links display horizontally */
+    justify-content: center;
+    /* Center the pagination links horizontally */
+    flex-wrap: wrap;
+    /* Allow wrapping of pagination links to the next line */
+}
+
+
+/* CSS for the pagination links */
+
+.page-link {
+    padding: 5px 10px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: #000;
+    border-radius: 5px;
+    /* Remove "display: inline-block;" to allow links to take the full width of the container */
+}
