@@ -147,8 +147,9 @@ a {
     width: 100px;
     height: 30px;
     background-color: transparent;
-    color: #6e67d4;
-    border: 1px solid #8d0f1f;
+    background-color: black;
+    color: #f7f7f7;
+    border: 1px solid #960404;
     border-radius: 15px;
     cursor: pointer;
     margin-left: 10px;

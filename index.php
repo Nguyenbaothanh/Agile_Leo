@@ -46,17 +46,19 @@ include_once 'index_process.php'; ?>
                 }
 
                 echo "<p><strong>" . $row['laptop_name'] . "</strong></p>";
-                echo "<p>Giá: " . $row['price_range'] . " VND</p>";
+                echo "<p>" . $row['price_range'] . "</p>";
                 echo "</a>";
                 echo "</div>";
 
             }
             $totalPages = ceil($totalProducts / $productsPerPage);
-        echo "<div class='pagination-container'>";
-        for ($page = 1; $page <= $totalPages; $page++) {
-            echo "<a class='page-link' href='?page=" . $page . "'>" . $page . "</a> ";
-        }
-        echo "</div>";
+            for ($page = 1; $page <= $totalPages; $page++) {
+                echo "<div class='centered-element'>"   ;
+    
+                 echo "<a class= 'page-link''href='?page=" . $page . "'>" . $page . "</a> ";
+                 echo "</div>";
+            }
+            echo "</div>";
             
         } else {
             echo "<p>No laptops found in the database.</p>";
@@ -65,7 +67,6 @@ include_once 'index_process.php'; ?>
         $conn->close();
         ?>
 
-        
      
         
     </div>

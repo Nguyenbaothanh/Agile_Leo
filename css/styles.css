@@ -1,14 +1,15 @@
 .gallery {
+    margin-top: 1%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .laptop {
-    width: 400px;
-    /* Adjusted width to fit 4 items per row */
-    margin: 15px;
-    padding: 15px;
+    width: calc(25% - 10px);
+    /* Adjust the width to leave some space between products */
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
@@ -17,15 +18,16 @@
 }
 
 .laptop img {
-    width: 100%;
-    max-width: 200px;
-    /* Adjust the maximum width of the image as needed */
-    height: auto;
-    /* Maintain aspect ratio */
+    margin-top: 10px;
+    width: 300px;
+    height: 150px;
 }
 
 .laptop p {
     margin: 0;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .laptop a {
@@ -34,32 +36,25 @@
     text-align: left;
 }
 
-
-/* CSS cho container chứa các liên kết phân trang */
-
-
-/* CSS cho container chứa các liên kết phân trang */
-
-
-/* CSS cho container chứa các liên kết phân trang */
-
-.pagination-container {
-    /* Change to "flex" to make pagination links display horizontally */
+.centered-element {
+    display: flex;
     justify-content: center;
-    /* Center the pagination links horizontally */
-    flex-wrap: wrap;
-    /* Allow wrapping of pagination links to the next line */
+    margin: auto;
 }
 
 
-/* CSS for the pagination links */
+/* Styles for page links */
 
 .page-link {
-    padding: 5px 10px;
-    margin: 5px;
+    margin: 0 5px;
     text-decoration: none;
-    background-color: #f2f2f2;
-    color: #000;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
     border-radius: 5px;
-    /* Remove "display: inline-block;" to allow links to take the full width of the container */
+    background-color: #f7f7f7;
+}
+
+.page-link:hover {
+    background-color: #e0e0e0;
 }

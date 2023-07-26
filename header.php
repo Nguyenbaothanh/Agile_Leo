@@ -49,6 +49,7 @@
         // Chưa đăng nhập, hiển thị liên kết đăng nhập và đăng ký dưới dạng button
         echo '<button class="auth-btn" onclick="openModal(\'login\')">Đăng nhập</button>';
         echo '<button class="auth-btn" onclick="openModal(\'register\')">Đăng ký</button>';
+        
       }
       ?>
 
@@ -58,14 +59,14 @@
   <!-- Modal for login -->
   <div id="modal-login" class="modal">
     <div class="modal-content">
-      <?php include 'login.php'; ?>
+      <?php include 'layout/login.php'; ?>
     </div>
   </div>
 
   <!-- Modal for register -->
   <div id="modal-register" class="modal">
     <div class="modal-content">
-      <?php include 'register.php'; ?>
+      <?php include 'layout/register.php'; ?>
     </div>
   </div>
 

@@ -22,8 +22,8 @@
 /* Style for the laptop image */
 
 .laptop img {
-    max-width: 100%;
-    height: auto;
+    width: 300px;
+    height: 150px;
 }
 
 
@@ -39,10 +39,8 @@
 /* Style for the laptop price */
 
 .laptop p {
-    font-size: 14px;
     margin: 0;
-    text-decoration: none;
-    /* Remove underline from the prices */
+    text-align: center;
 }
 
 .laptop a {
