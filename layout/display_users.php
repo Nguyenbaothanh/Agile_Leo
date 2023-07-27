@@ -36,7 +36,7 @@
                 </tr>";
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
-                    <td>".$row['id']."</td>
+                    <td>".$row['user_id']."</td>
                     <td>".$row['username']."</td>
                     <td>".$row['password']."</td>
                     <td>".$row['full_name']."</td>
@@ -44,8 +44,8 @@
                     <td>".$row['email']."</td>
                     <td>".$row['address']."</td>
                     <td>
-                    <a href='edit_user.php?id=".$row['id']."' onclick='openModal1()'>Sửa</a> |
-                    <a href='/action/delete_user.php?id=".$row['id']."'>Xóa</a>
+                    <a href='edit_user.php?id=".$row['user_id']."' onclick='openModal1()'>Sửa</a> |
+                    <a href='/action/delete_user.php?id=".$row['user_id']."'>Xóa</a>
                     </td>
                 </tr>";
         }

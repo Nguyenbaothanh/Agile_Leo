@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id'])) {
 
 // Retrieve the user's information from the database
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM users WHERE id = $user_id";
+$sql = "SELECT * FROM users WHERE user_id = $user_id";
 $result = $conn->query($sql);
 
 // Check if the query was successful

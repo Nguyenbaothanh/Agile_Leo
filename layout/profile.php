@@ -13,8 +13,8 @@
   
 ?></header>
     <?php include 'checklogin.php' ?>
-
-    <form action="Agile-web1/action/process_profile_update.php" method="post" class="profile-user">
+    <form action="/action/process_profile_update.php" method="post" class="profile-user">
+    <input type="hidden" name="user_id" value="<?php echo $user_data['user_id']; ?>">
     <h1>Thông tin cá nhân</h1>
     <label for="username">Tên đăng nhập:</label>
     <input type="text" id="username" name="username" value="<?php echo $user_data['username']; ?>" disabled>

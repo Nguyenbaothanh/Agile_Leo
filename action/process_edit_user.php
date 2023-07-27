@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST["address"];
 
     // Cập nhật thông tin người dùng dựa trên ID
-    $sql = "UPDATE users SET username = '$username', full_name = '$full_name', sex = '$sex', email = '$email', address = '$address' WHERE id = $user_id";
+    $sql = "UPDATE users SET username = '$username', full_name = '$full_name', sex = '$sex', email = '$email', address = '$address' WHERE user_id = $user_id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: /layout/display_users.php");

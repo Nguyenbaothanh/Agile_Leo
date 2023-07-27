@@ -1,33 +1,32 @@
 <?php
 include_once 'connect.php';
+
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve the form data
+    $user_id = $_POST["user_id"];
     $newPassword = $_POST["password"];
     $fullName = $_POST["full_name"];
     $sex = $_POST["sex"];
     $email = $_POST["email"];
     $address = $_POST["address"];
-    $userId = $_SESSION["user_id"]; // Assuming you have stored the user ID in the session
 
     // Perform any necessary validation on the form data here
     // For example, you may check if the email is valid, perform length checks, etc.
-    // If any validation fails, you can redirect back to the profile page with an error message.
+    // If any validation fails, you should redirect back to the profile page with an error message.
+    // For simplicity, I'm omitting the validation checks here.
 
-    // If a new password is provided, update the password field as well
+    // Update the user's profile data in the database, including the password (without hashing)
     if (!empty($newPassword)) {
-        // You should perform password hashing and other security measures here
-        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-
-        // Update the user's profile data in the database, including the password
-        $sql = "UPDATE users SET full_name = ?, sex = ?, email = ?, address = ?, password = ? WHERE id = ?";
+        // Update the user's profile data in the database, including the plain password
+        $sql = "UPDATE users SET full_name = ?, sex = ?, email = ?, address = ?, password = ? WHERE user_id = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssi", $fullName, $sex, $email, $address, $hashedPassword, $userId);
+        $stmt->bind_param("sssssi", $fullName, $sex, $email, $address, $newPassword, $user_id);
     } else {
         // Update the user's profile data in the database, excluding the password
-        $sql = "UPDATE users SET full_name = ?, sex = ?, email = ?, address = ? WHERE id = ?";
+        $sql = "UPDATE users SET full_name = ?, sex = ?, email = ?, address = ? WHERE user_id = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssi", $fullName, $sex, $email, $address, $userId);
+        $stmt->bind_param("ssssi", $fullName, $sex, $email, $address, $user_id);
     }
 
     // Execute the update
@@ -38,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         // Update failed, redirect with an error message
         header("Location: /layout/profile.php?error=1");
-        
         exit();
     }
 } else {

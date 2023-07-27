@@ -40,11 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Laptop added successfully!";
-        header("Location: /layout/admin_dashboard.php");
+        header("Location: /layout/display_laptop.php");
 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-        header("Location: /layout/admin_dashboard.php");
+        header("Location: /layout/display_laptop.php");
 
     }
 
