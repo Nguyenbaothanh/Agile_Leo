@@ -30,7 +30,6 @@ include_once 'index_process.php'; ?>
             $productsArray[] = $row;
         }
         $totalProducts = count($productsArray);
-
         if ($totalProducts > 0) {
             // Xử lý việc chỉ hiển thị các sản phẩm tương ứng với trang hiện tại
             for ($i = $startProduct; $i < min($endProduct, $totalProducts); $i++) {
@@ -52,11 +51,20 @@ include_once 'index_process.php'; ?>
 
             }
             $totalPages = ceil($totalProducts / $productsPerPage);
+            echo "<div class='clearfix'></div>";
+
+            // Hiển thị page links
+            echo "<div class='pagination'>";
+            if ($currentPage > 1) {
+                echo "<a class='page-link' href='?page=" . ($currentPage - 1) . "'>Previous</a> ";
+            }
+
             for ($page = 1; $page <= $totalPages; $page++) {
-                echo "<div class='centered-element'>"   ;
-    
-                 echo "<a class= 'page-link''href='?page=" . $page . "'>" . $page . "</a> ";
-                 echo "</div>";
+                echo "<a class='page-link' href='?page=" . $page . "'>" . $page . "</a> ";
+            }
+
+            if ($currentPage < $totalPages) {
+                echo "<a class='page-link' href='?page=" . ($currentPage + 1) . "'>Next</a>";
             }
             echo "</div>";
             
@@ -64,11 +72,8 @@ include_once 'index_process.php'; ?>
             echo "<p>No laptops found in the database.</p>";
         }
 
-        $conn->close();
         ?>
 
-     
-        
     </div>
 
     <footer><?php include_once 'footer.php'; ?></footer>

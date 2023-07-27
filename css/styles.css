@@ -1,60 +1,57 @@
 .gallery {
-    margin-top: 1%;
-    display: flex;
     flex-wrap: wrap;
     margin-left: 10%;
     margin-right: 10%;
 }
 
+
+/* Product styles */
+
 .laptop {
-    width: calc(25% - 10px);
-    /* Adjust the width to leave some space between products */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.laptop img {
-    margin-top: 10px;
-    width: 300px;
-    height: 150px;
-}
-
-.laptop p {
-    margin: 0;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    float: left;
 }
 
 .laptop a {
     text-decoration: none;
-    color: black;
-    text-align: left;
-}
-
-.centered-element {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-
-/* Styles for page links */
-
-.page-link {
-    margin: 0 5px;
-    text-decoration: none;
     color: #333;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #f7f7f7;
 }
 
-.page-link:hover {
-    background-color: #e0e0e0;
+.laptop img {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination a.page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+
+/* Clear floats after laptop items */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
