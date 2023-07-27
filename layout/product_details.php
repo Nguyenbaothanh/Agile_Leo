@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/product_detail.css">
+    <link rel="stylesheet" href="/css/laptop_detail.css">
 </head>
 <body>
 <div class="container">
@@ -31,27 +31,38 @@ if (isset($_GET['id'])) {
 
     // Check if a laptop with the given id exists in the database
     if ($result && $result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+        $row = $result->fetch_assoc();?>
+        <div class="product-details">
+            <div class="product-image">
+                <img src="/action/<?php echo $row['image_url']; ?>" alt="<?php echo $row['laptop_name']; ?> Image">
+            </div>
+            <div class="laptop_detail">
+                <form class="product-info-form">
+                    <h1><?php echo $row['laptop_name']; ?></h1>
+                    <p>Hãng: <?php echo $row['brand']; ?></p>
+                    <p>Processor: <?php echo $row['processor']; ?></p>
+                    <p>Screen Size: <?php echo $row['screen_size']; ?></p>
+                    <p>Graphics Card: <?php echo $row['graphics_card']; ?></p>
+                    <p>RAM: <?php echo $row['ram']; ?></p>
+                    <p>Storage Capacity: <?php echo $row['storage_capacity']; ?></p>
+                    <p>Operating System: <?php echo $row['operating_system']; ?></p>
+                    <p>Weight: <?php echo $row['weight']; ?></p>
+                    <p class="status">Status: <?php echo $row['status']; ?></p>
+                    <p>Price Range: <?php echo $row['price_range']; ?> VND</p>
+                </form>
+            </div>
+        </div>
 
-        echo "<h1>" . $row['laptop_name'] . "</h1>";
-        echo "<p>Brand: " . $row['brand'] . "</p>";
-        echo "<p>Processor: " . $row['processor'] . "</p>";
-        echo "<p>Screen Size: " . $row['screen_size'] . "</p>";
-        echo "<p>Graphics Card: " . $row['graphics_card'] . "</p>";
-        echo "<p>RAM: " . $row['ram'] . "</p>";
-        echo "<p>Storage Capacity: " . $row['storage_capacity'] . "</p>";
-        echo "<p>Operating System: " . $row['operating_system'] . "</p>";
-        echo "<p>Weight: " . $row['weight'] . "</p>";
-        echo "<p>Status: " . $row['status'] . "</p>";
-        echo "<p>Price Range: " . $row['price_range'] . " VND</p>";
-        echo "<img src='/action/" . $row['image_url'] . "' alt='" . $row['laptop_name'] . " Image'>";
-
-        // Add a button to add the product to the shopping cart
-        echo "<form action='add_to_cart.php' method='post'>";
-        echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
-        echo "<input type='submit' value='Add to Cart'>";
-        echo "</form>";
-
+        <div class="add-to-cart-form">
+            <form action="add_to_cart.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                <label for="quantity">Số lượng:</label>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" max="10">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </div>
+        <?php
+        echo "</div>";
     } else {
         // If no laptop with the given id is found, display an error message or redirect to a 404 page.
         echo "<p>Laptop not found.</p>";
@@ -64,6 +75,7 @@ if (isset($_GET['id'])) {
     echo "<p>Invalid request. Laptop ID not provided.</p>";
 }
 ?>
+
     </div>
 
 </body>
