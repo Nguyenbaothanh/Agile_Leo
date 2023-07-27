@@ -59,6 +59,7 @@
                 <div class="add-to-cart-form">
                     <form action="/action/add_to_cart.php" method="post">
                         <!-- Pass the user_id to the form -->
+                        <input type="hidden" name="laptop_id" value="<?php echo $row['id']; ?>">
                         <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
                         <input type="hidden" name="laptop_id" value="<?php echo $row['id']; ?>">
                         <label for="quantity">Số lượng:</label>
