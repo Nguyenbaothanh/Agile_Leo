@@ -6,9 +6,9 @@
 </head>
 <body>
     <nav class="vertical navigation">
-        <h2 style=color:#fff>Menu</h2>
+        <h2 style=color:#fff;>Menu</h2>
         <ul>
-            <li><a href="/index.php;">Trang chủ </a></li>
+            <li><a href="/index.php">Trang chủ </a></li>
             <li><a href="display_users.php">Quản lí người dùng</a></li>
             <li><a href="display_laptop.php">Quản lí sản phẩm</a></li>
             <li><a href="display_order.php">Quản lí đơn hàng</a></li>
