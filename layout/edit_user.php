@@ -13,16 +13,15 @@
         $user_id = $_GET["id"];
 
         // Lấy thông tin người dùng từ cơ sở dữ liệu dựa trên ID
-        $sql = "SELECT * FROM users WHERE id = $user_id";
+        $sql = "SELECT * FROM users WHERE user_id = $user_id";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
-    ?>
+            $row = $result->fetch_assoc();?>
             <h1>Sửa người dùng</h1>
 
             <form action="/action/process_edit_user.php" method="POST">
-                <input type="hidden" name="user_id" value="<?php echo $row['id']; ?>">
+                <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                 <label for="username">Tên đăng nhập:</label>
                 <input type="text" id="username" name="username" value="<?php echo $row['username']; ?>" required>
                 <br>
