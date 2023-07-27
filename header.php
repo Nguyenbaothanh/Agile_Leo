@@ -23,7 +23,6 @@
       </form>
   </div>
 </div>
-
     <div class="user-info">
     <?php
       session_start();
@@ -33,10 +32,9 @@
         <div class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tên người dùng <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/layout/profile.php">Thông tin người dùng</a></li>
-            
+            <li><a href="/layout/profile.php">Thông tin người dùng</a></li>       
             <?php if ($_SESSION['type'] === 'user') : ?>
-              <li><a href="/cart.php">Giỏ hàng</a></li>
+              <li><a href="/layout/cart.php">Giỏ hàng</a></li>
             <?php endif; ?>
             <?php if ($_SESSION['type'] === 'admin') : ?>
               <li><a href="/layout/admin_dashboard.php">Dashboard Admin</a></li>

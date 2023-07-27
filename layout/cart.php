@@ -52,7 +52,7 @@
                 echo "<td>$laptop_name</td>";
                 echo "<td>$price_range</td>";
                 echo "<td><span class='quantity-value' data-laptop-id='$laptop_id'>$quantity</span> <span class='edit-quantity-btn' onclick='editQuantity($laptop_id)'>Edit</span></td>";
-                echo "<td><a href='remove_from_cart.php?id=$laptop_id'><img src='/img/remove_product.jpg' alt='Remove'></a></td>";
+                echo "<td><a href='/action/remove_product_cart.php?delete_laptop_id=$laptop_id'><img src='/img/remove_product.jpg' alt='Remove'></a></td>";
                 echo "</tr>";
             }
 
