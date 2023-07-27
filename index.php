@@ -7,14 +7,12 @@ include_once 'index_process.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ</title>
-
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <header><?php include_once 'header.php'; ?></header>
     <div class='chuyentrang'><?php include_once 'slide-image.php' ?></div>
-
     <div class="gallery">
         <?php
         // Định nghĩa số lượng sản phẩm trên mỗi trang
@@ -36,23 +34,19 @@ include_once 'index_process.php'; ?>
                 $row = $productsArray[$i];
                 echo "<div class='laptop'>";
                 echo "<a href='/layout/product_details.php?id=" . $row['id'] . "'>"; // Link to product details page
-
                 // Hiển thị thông tin ảnh sản phẩm
                 if (!empty($row['image_url'])) {
                     echo "<img src='action/" . $row['image_url'] . "' alt='Laptop Image'>";
                 } else {
                     echo "<img src='img/laptop.png' alt='Default Image'>";
                 }
-
                 echo "<p><strong>" . $row['laptop_name'] . "</strong></p>";
                 echo "<p>" . $row['price_range'] . "</p>";
                 echo "</a>";
                 echo "</div>";
-
             }
             $totalPages = ceil($totalProducts / $productsPerPage);
             echo "<div class='clearfix'></div>";
-
             // Hiển thị page links
             echo "<div class='pagination'>";
             if ($currentPage > 1) {
@@ -66,17 +60,12 @@ include_once 'index_process.php'; ?>
             if ($currentPage < $totalPages) {
                 echo "<a class='page-link' href='?page=" . ($currentPage + 1) . "'>Next</a>";
             }
-            echo "</div>";
-            
+            echo "</div>";           
         } else {
             echo "<p>No laptops found in the database.</p>";
         }
-
         ?>
-
     </div>
-
     <footer><?php include_once 'footer.php'; ?></footer>
 </body>
-
 </html>
