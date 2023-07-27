@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($result) {
                 echo "Item added to the cart successfully.";
+                header("Location: /layout/product_details.php?id=" . $laptop_id);
             } else {
                 echo "Error adding item to the cart.";
             }
