@@ -7,78 +7,78 @@
 <body>
     <div id="mainnav">
         <ul>
-            <li class="thefirst"><a href="#">LAPTOP MỚI CHÍNH HÃNG</a>
+            <li class="thefirst"><a href="#">Laptop MỚI CHÍNH HÃNG</a>
                 <ul class="sub-menu">
-                    <li><a href="#">Laptop Asus</a>
+                    <li><a href="#">Asus</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop Asus Core i3</a></li>
-                            <li><a href="#">Laptop Asus Core i5</a></li>
-                            <li><a href="#">Laptop Asus Core i7</a></li>
-                            <li><a href="#">Laptop Asus Core i3</a></li>
-                            <li><a href="#">Laptop Asus Core i9</a></li>
-                            <li><a href="#">Laptop Asus Vivobook</a></li>
-                            <li><a href="#">Laptop Asus ROG</a></li>
-                            <li><a href="#">Laptop Asus Zenbook</a></li>
-                            <li><a href="#">Laptop Asus TUF</a></li>
-                            <li><a href="#">Laptop Asus Expertbook</a></li>
+                            <li><a href="#">Asus Core i3</a></li>
+                            <li><a href="#">Asus Core i5</a></li>
+                            <li><a href="#">Asus Core i7</a></li>
+                            <li><a href="#">Asus Core i3</a></li>
+                            <li><a href="#">Asus Core i9</a></li>
+                            <li><a href="#">Asus Vivobook</a></li>
+                            <li><a href="#">Asus ROG</a></li>
+                            <li><a href="#">Asus Zenbook</a></li>
+                            <li><a href="#">Asus TUF</a></li>
+                            <li><a href="#">Asus Expertbook</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop Dell</a>
+                    <li><a href="#">Dell</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop Dell Core i3</a></li>
-                            <li><a href="#">Laptop Dell Core i5</a></li>
-                            <li><a href="#">Laptop Dell Core i7</a></li>
-                            <li><a href="#">Laptop Dell Core i9</a></li>
-                            <li><a href="#">Laptop Dell Inspiron</a></li>
-                            <li><a href="#">Laptop Dell XPS</a></li>
-                            <li><a href="#">Laptop Dell Latitude</a></li>
-                            <li><a href="#">Laptop Dell AMD Ryzen 3</a></li>
-                            <li><a href="#">Laptop Dell AMD Ryzen 5</a></li>
-                            <li><a href="#">Laptop Dell Vostro</a></li>
-                            <li><a href="#">Laptop Dell Alienware</a></li>
-                            <li><a href="#">Laptop Dell Precision</a></li>
+                            <li><a href="#">Dell Core i3</a></li>
+                            <li><a href="#">Dell Core i5</a></li>
+                            <li><a href="#">Dell Core i7</a></li>
+                            <li><a href="#">Dell Core i9</a></li>
+                            <li><a href="#">Dell Inspiron</a></li>
+                            <li><a href="#">Dell XPS</a></li>
+                            <li><a href="#">Dell Latitude</a></li>
+                            <li><a href="#">Dell AMD Ryzen 3</a></li>
+                            <li><a href="#">Dell AMD Ryzen 5</a></li>
+                            <li><a href="#">Dell Vostro</a></li>
+                            <li><a href="#">Dell Alienware</a></li>
+                            <li><a href="#">Dell Precision</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop Lenovo</a>
+                    <li><a href="#">Lenovo</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop Lenovo Core i3</a></li>
-                            <li><a href="#">Laptop Lenovo Core i5</a></li>
-                            <li><a href="#">Laptop Lenovo Core i7</a></li>
+                            <li><a href="#">Lenovo Core i3</a></li>
+                            <li><a href="#">Lenovo Core i5</a></li>
+                            <li><a href="#">Lenovo Core i7</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop HP</a>
+                    <li><a href="#">HP</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop HP Core i3</a></li>
-                            <li><a href="#">Laptop HP Core i5</a></li>
-                            <li><a href="#">Laptop HP Core i7</a></li>
-                            <li><a href="#">Laptop HP Pavilion</a></li>
-                            <li><a href="#">Laptop HP Envy</a></li>
-                            <li><a href="#">Laptop HP Elitebook</a></li>
-                            <li><a href="#">Laptop HP Spectre</a></li>
-                            <li><a href="#">Laptop HP Victus</a></li>
-                            <li><a href="#">Laptop HP Omen</a></li>
+                            <li><a href="#">HP Core i3</a></li>
+                            <li><a href="#">HP Core i5</a></li>
+                            <li><a href="#">HP Core i7</a></li>
+                            <li><a href="#">HP Pavilion</a></li>
+                            <li><a href="#">HP Envy</a></li>
+                            <li><a href="#">HP Elitebook</a></li>
+                            <li><a href="#">HP Spectre</a></li>
+                            <li><a href="#">HP Victus</a></li>
+                            <li><a href="#">HP Omen</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop MSI</a>
+                    <li><a href="#">MSI</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop MSI Bravo</a></li>
-                            <li><a href="#">Laptop MSI Modern</a></li>
-                            <li><a href="#">Laptop MSI Katana</a></li>
+                            <li><a href="#">MSI Bravo</a></li>
+                            <li><a href="#">MSI Modern</a></li>
+                            <li><a href="#">MSI Katana</a></li>
                             <li><a href="#">MSI Creator</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop Acer</a>
+                    <li><a href="#">Acer</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop Acer Nitro</a></li>
-                            <li><a href="#">Laptop Acer Aspire</a></li>
-                            <li><a href="#">Laptop Acer Core i3</a></li>
-                            <li><a href="#">Laptop Acer Core i5</a></li>
-                            <li><a href="#">Laptop Acer Core i7</a></li>
-                            <li><a href="#">Laptop Acer Swift</a></li>
-                            <li><a href="#">Laptop Acer Predator</a></li>
+                            <li><a href="#">Acer Nitro</a></li>
+                            <li><a href="#">Acer Aspire</a></li>
+                            <li><a href="#">Acer Core i3</a></li>
+                            <li><a href="#">Acer Core i5</a></li>
+                            <li><a href="#">Acer Core i7</a></li>
+                            <li><a href="#">Acer Swift</a></li>
+                            <li><a href="#">Acer Predator</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Macbook Mới 100%</a>
+                    <li><a href="#">Macbook</a>
                         <ul class="sub-menu2">
                             <li><a href="#">Macbook Air 2020</a></li>
                             <li><a href="#">Macbook Pro 2020</a></li>
@@ -86,26 +86,26 @@
                             <li><a href="#">Macbook Pro M1</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop LG</a>
+                    <li><a href="#">LG</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop LG Gram</a></li>
-                            <li><a href="#">Laptop LG Ultra</a></li>
+                            <li><a href="#">LG Gram</a></li>
+                            <li><a href="#">LG Ultra</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop GIGABYTE</a>
+                    <li><a href="#">GIGABYTE</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Laptop GIGABYTE Aero</a></li>
-                            <li><a href="#">Laptop GIGABYTE Aorus</a></li>
+                            <li><a href="#">GIGABYTE Aero</a></li>
+                            <li><a href="#">GIGABYTE Aorus</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop Samsung Galaxy</a>
+                    <li><a href="#">Samsung Galaxy</a>
                         <ul class="sub-menu2">
                             <li><a href="#">Samsung Galaxy Book Flex</a></li>
                             <li><a href="#">Samsung Galaxy Book Ion</a></li>
                             <li><a href="#">Samsung Galaxy Book S</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Laptop Huawei</a>
+                    <li><a href="#">Huawei</a>
                         <ul class="sub-menu2">
                             <li><a href="#">Huawei MateBook X Pro</a></li>
                             <li><a href="#">Huawei MateBook 13</a></li>
@@ -119,16 +119,16 @@
     </div>
     <div class="slideshow-container">
         <div class="mySlides">
-            <img src="/img/laptop.png" style="width:100%">
+            <img src="/img/laptop5.jpg" style="width:100%">
         </div>
         <div class="mySlides">
             <img src="/img/laptop1.png" style="width:100%">
         </div>
         <div class="mySlides">
-            <img src="/img/laptop2.png" style="width:100%">
+            <img src="/img/laptop4.jpg" style="width:100%">
         </div>
         <div class="mySlides">
-            <img src="/img/laptop3.png" style="width:100%">
+            <img src="/img/laptop2.png" style="width:100%">
         </div>
 
         <!-- Thêm nút trước và sau -->

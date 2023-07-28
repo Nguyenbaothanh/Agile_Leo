@@ -8,6 +8,7 @@
 </head>
 <body>
     <header><?php include "header.php"; ?></header>
+    <main>
     <?php
     // cart.php
     // Initialize the session (assuming you want to use sessions)
@@ -33,7 +34,7 @@
             // Initialize a variable to keep track of the total price
             $totalPrice = 0;
 
-            echo "<h2>Shopping Cart</h2>";
+            echo "<h2>Giỏ Hàng</h2>";
             echo "<table>";
             echo "<tr><th>Tên Laptop</th><th>Giá tiền</th><th>Số lượng</th><th>Xóa</th></tr>";
             while ($row = $result->fetch_assoc()) {
@@ -62,6 +63,7 @@
                 echo "</td>";
                 echo "<td class='remove-product'><a href='/action/remove_product_cart.php?delete_laptop_id=$laptop_id'><img src='/img/remove_product.jpg' alt='Remove'></a></td>";
                 echo "</tr>";
+                
             }
             echo "</table>";
 
@@ -74,6 +76,8 @@
         echo "<p>User not logged in. Please log in to view the shopping cart.</p>";
     }
     ?>
+    <button id="paymentButton" onclick="proceedToPayment()">Proceed to Payment</button>
+    </main>
     <footer><?php include "footer.php"; ?></footer>
 
 
@@ -128,7 +132,7 @@
 
         // Update the total price displayed on the page
         const totalPriceDisplay = document.getElementById('totalPriceDisplay');
-        totalPriceDisplay.textContent = isNaN(totalPrice) ? "Total Price: NaN" : `Total Price: ${totalPrice.toFixed(2)}`;
+        totalPriceDisplay.textContent = isNaN(totalPrice) ? "Total Price: NaN" : `Total Price: ${totalPrice.toFixed(0)}`;
     }
 
     // Event listener to handle the quantity button clicks

@@ -25,6 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         echo "Tên đăng nhập hoặc mật khẩu không chính xác.";
+        header("Location: /index.php");       
+
     }
 }
 

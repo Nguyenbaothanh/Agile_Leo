@@ -53,3 +53,22 @@ table tr:nth-child(even) {
     font-weight: bold;
     padding: 10px;
 }
+
+#paymentButton {
+    background-color: #4CAF50;
+    /* Màu nền của nút */
+    color: white;
+    /* Màu chữ của nút */
+    padding: 10px 20px;
+    /* Kích thước nút */
+    border: none;
+    /* Loại bỏ đường viền */
+    border-radius: 4px;
+    /* Bo góc nút */
+    cursor: pointer;
+    /* Đổi con trỏ chuột thành bàn tay khi di chuột vào nút */
+    float: right;
+    /* Dịch nút sang bên phải */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

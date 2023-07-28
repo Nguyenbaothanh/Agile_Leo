@@ -1,7 +1,25 @@
+/* Reset some default styles for body and html */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    /* Fill the remaining vertical space */
+}
+
 footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
+    padding: 10px;
+    flex-shrink: 0;
     text-align: center;
 }
