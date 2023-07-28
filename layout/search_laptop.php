@@ -8,6 +8,7 @@
 <body>
     <header>
         <?php include_once 'header.php'; ?>
+        
     </header>
 
     <?php

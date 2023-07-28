@@ -8,7 +8,6 @@
 </head>
 <body>
     <header><?php include "header.php"; ?></header>
-
     <div class="container">
     <?php
     // product_details.php
@@ -94,80 +93,73 @@
                 </script>
             <?php endif; ?>
             <?php
-// ...
-// After displaying the product details, add the code for displaying comments
 
-// Function to get comments for a given laptop_id with full names
-function get_comments_with_fullname($laptop_id) {
-    global $conn;
-    $laptop_id = sanitize_input($laptop_id);
-    $sql = "SELECT bl.`id_nguoi_dung`, bl.`rating`, bl.`noi_dung`, u.`full_name` 
-            FROM `binh_luan_laptop` bl
-            INNER JOIN `users` u ON bl.`id_nguoi_dung` = u.`user_id`
-            WHERE bl.`laptop_id` = $laptop_id
-            ORDER BY bl.`id` DESC";
-    $result = $conn->query($sql);
-    return $result->fetch_all(MYSQLI_ASSOC);
-}
+            function get_comments_with_fullname($laptop_id) {
+                global $conn;
+                $laptop_id = sanitize_input($laptop_id);
+                $sql = "SELECT bl.`id_nguoi_dung`, bl.`rating`, bl.`noi_dung`, u.`full_name` 
+                        FROM `binh_luan_laptop` bl
+                        INNER JOIN `users` u ON bl.`id_nguoi_dung` = u.`user_id`
+                        WHERE bl.`laptop_id` = $laptop_id
+                        ORDER BY bl.`id` DESC";
+                $result = $conn->query($sql);
+                return $result->fetch_all(MYSQLI_ASSOC);
+            }
 
-// Get comments for the current laptop with full names
-$comments = get_comments_with_fullname($laptop_id);
+            // Get comments for the current laptop with full names
+            $comments = get_comments_with_fullname($laptop_id);
 
-// Display comments
-if (!empty($comments)) {
-    $comments_per_page = 5;
-    $total_comments = count($comments);
-    $total_pages = ceil($total_comments / $comments_per_page);
+            // Display comments
+            if (!empty($comments)) {
+                $comments_per_page = 5;
+                $total_comments = count($comments);
+                $total_pages = ceil($total_comments / $comments_per_page);
 
-    // Get the current page from the URL query string
-    $current_page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-    if ($current_page < 1) {
-        $current_page = 1;
-    } elseif ($current_page > $total_pages) {
-        $current_page = $total_pages;
-    }
+                // Get the current page from the URL query string
+                $current_page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+                if ($current_page < 1) {
+                    $current_page = 1;
+                } elseif ($current_page > $total_pages) {
+                    $current_page = $total_pages;
+                }
 
-    // Calculate the starting index and ending index of comments for the current page
-    $start_index = ($current_page - 1) * $comments_per_page;
-    $end_index = $start_index + $comments_per_page;
+                // Calculate the starting index and ending index of comments for the current page
+                $start_index = ($current_page - 1) * $comments_per_page;
+                $end_index = $start_index + $comments_per_page;
 
-    echo '<div class="comments">';
-    for ($i = $start_index; $i < $end_index && $i < $total_comments; $i++) {
-        echo '<div class="comment">';
-        echo '<p>User: ' . $comments[$i]['full_name'] . '</p>'; // Display full_name instead of id_nguoi_dung
-        echo '<p>Rating: ' . $comments[$i]['rating'] . '</p>';
-        echo '<p>Comment: ' . $comments[$i]['noi_dung'] . '</p>';
-        echo '</div>';
-    }
-    echo '</div>';
+                echo '<div class="comments">';
+                for ($i = $start_index; $i < $end_index && $i < $total_comments; $i++) {
+                    echo '<div class="comment">';
+                    echo '<p>User: ' . $comments[$i]['full_name'] . '</p>'; // Display full_name instead of id_nguoi_dung
+                    echo '<p>Comment: ' . $comments[$i]['noi_dung'] . '</p>';
+                    echo '</div>';
+                }
+                echo '</div>';
 
-    // Display pagination links
-    echo '<div class="pagination">';
-    for ($page = 1; $page <= $total_pages; $page++) {
-        echo '<a href="?id=' . $laptop_id . '&page=' . $page . '">' . $page . '</a>';
-    }
-    echo '</div>';
-} else {
-    echo '<p>No comments yet.</p>';
-}
-?>
+                // Display pagination links
+                echo '<div class="pagination">';
+                for ($page = 1; $page <= $total_pages; $page++) {
+                    echo '<a href="?id=' . $laptop_id . '&page=' . $page . '">' . $page . '</a>';
+                }
+                echo '</div>';
+            } else {
+                echo '<p>No comments yet.</p>';
+            }
+            ?>            
+                        <?php
+                        echo "</div>";
+                    } else {
+                        // If no laptop with the given id is found, display an error message or redirect to a 404 page.
+                        echo "<p>Laptop not found.</p>";
+                    }
 
-           
-
-            <?php
-            echo "</div>";
-        } else {
-            // If no laptop with the given id is found, display an error message or redirect to a 404 page.
-            echo "<p>Laptop not found.</p>";
-        }
-
-        // Close the database connection
-        $conn->close();
-    } else {
-        // If the 'id' parameter is not provided, display an error message or redirect to a 404 page.
-        echo "<p>Invalid request. Laptop ID not provided.</p>";
-    }
-    ?>
+                    // Close the database connection
+                    $conn->close();
+                } else {
+                    // If the 'id' parameter is not provided, display an error message or redirect to a 404 page.
+                    echo "<p>Invalid request. Laptop ID not provided.</p>";
+                }
+                ?>
     </div>
 
     <footer><?php include "footer.php"; ?></footer>

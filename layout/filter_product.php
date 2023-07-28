@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Hãng</h1>
+    <h1>brand</h1>
     <div class="row"><a href="#" data-filter="Asus">Asus</a></div>
     <div class="row"><a href="#" data-filter="Acer">Acer</a></div>
     <div class="row"><a href="#" data-filter="Dell">Dell</a></div>
@@ -8,7 +8,7 @@
     <div class="row"><a href="#" data-filter="Lenovo">Lenovo</a></div>
     <div class="row"><a href="#" data-filter="LG">LG</a></div>
     <div class="row"><a href="#" data-filter="MSI">MSI</a></div>
-    <h1>Bộ vi xử lý</h1>
+    <h1>processor</h1>
     <div class="row"><a href="#" data-filter="Intel Celeron">Intel Celeron</a></div>
     <div class="row"><a href="#" data-filter="Intel Pentium">Intel Pentium</a></div>
     <div class="row"><a href="#" data-filter="Core i3">Core i3</a></div>
@@ -24,7 +24,7 @@
     <div class="row"><a href="#" data-filter="Apple M2 Max">Apple M2 Max</a></div>
     <div class="row"><a href="#" data-filter="Apple M2 Pro">Apple M2 Pro</a></div>
     <div class="row"><a href="#" data-filter="SQ3">SQ3</a></div>
-    <h1>Kích thước màn hình</h1>
+    <h1>screen_size</h1>
     <div class="row"><a href="#" data-filter="10.5 inch">10.5 inch</a></div>
     <div class="row"><a href="#" data-filter="11.6 inch">11.6 inch</a></div>
     <div class="row"><a href="#" data-filter="12.3 inch">12.3 inch</a></div>
@@ -45,7 +45,7 @@
     <div class="row"><a href="#" data-filter="17.3 inch">17.3 inch</a></div>
     <div class="row"><a href="#" data-filter="16.2 inch">16.2 inch</a></div>
     <div class="row"><a href="#" data-filter="18 inch">18 inch</a></div>
-    <h1>Card đồ họa (VGA)</h1>
+    <h1>graphics_card</h1>
     <div class="row"><a href="#" data-filter="Intel HD Graphics">Intel HD Graphics</a></div>
     <div class="row"><a href="#" data-filter="Intel UHD Graphics">Intel UHD Graphics</a></div>
     <div class="row"><a href="#" data-filter="Iris Xe Graphics">Iris Xe Graphics</a></div>
@@ -83,13 +83,14 @@
     <div class="row"><a href="#" data-filter="RTX 2050 6GB">RTX 2050 6GB</a></div>
     <div class="row"><a href="#" data-filter="AMD Radeon 660M">AMD Radeon 660M</a></div>
     <div class="row"><a href="#" data-filter="RTX 3060 6GB">RTX 3060 6GB</a></div>
-    <h1>Bộ nhớ trong (RAM)</h1>
+    <h1>ram</h1>
     <div class="row"><a href="#" data-filter="4GB">4GB</a></div>
     <div class="row"><a href="#" data-filter="8GB">8GB</a></div>
     <div class="row"><a href="#" data-filter="16GB">16GB</a></div>
     <div class="row"><a href="#" data-filter="24GB">24GB</a></div>
     <div class="row"><a href="#" data-filter="32GB">32GB</a></div>
     <div class="row"><a href="#" data-filter="64GB">64GB</a></div>
+    <h1>storage_capacity</h1>
     <div class="row"><a href="#" data-filter="2 TB">2 TB</a></div>
     <div class="row"><a href="#" data-filter="1 TB">1 TB</a></div>
     <div class="row"><a href="#" data-filter="256GB SSD">256GB SSD</a></div>
@@ -100,7 +101,7 @@
     <div class="row"><a href="#" data-filter="64GB eMMC">64GB eMMC</a></div>
     <div class="row"><a href="#" data-filter="1TB + 1TB SSD">1TB + 1TB SSD</a></div>
     <div class="row"><a href="#" data-filter="128GB SSD">128GB SSD</a></div>
-    <h1>Hệ điều hành</h1>
+    <h1>operating_system</h1>
     <div class="row"><a href="#" data-filter="Windows 10">Windows 10</a></div>
     <div class="row"><a href="#" data-filter="Mac OS">Mac OS</a></div>
     <div class="row"><a href="#" data-filter="Windows 11">Windows 11</a></div>

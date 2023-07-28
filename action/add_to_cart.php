@@ -34,12 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     if ($stmt->execute()) {
                         // Replace the echo statement with a JavaScript alert
-                        echo '<script>alert("Item added to the cart successfully.");</script>';
+                        echo '<script>alert("Thêm sản phẩm thành công vào giỏ hàng");</script>';
                         // Redirect to the product details page after showing the alert
                         echo '<script>window.location.href = "/layout/product_details.php?id=' . $laptop_id . '";</script>';
                         exit; // Stop further execution to prevent unintended behavior.
                     } else {
-                        echo '<script>alert("Error adding item to the cart.");</script>';
+                        echo '<script>alert("Thêm sản phẩm thất bại vào giỏ hàng");</script>';
                     }
                 } else {
                     echo '<script>alert("Invalid quantity. Please enter a positive quantity.");</script>';

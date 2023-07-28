@@ -9,9 +9,9 @@
         <ul>
             <li class="thefirst"><a href="#">Laptop MỚI CHÍNH HÃNG</a>
                 <ul class="sub-menu">
-                    <li><a href="#">Asus</a>
+                    <li><a value="branch" href="#">Asus</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Asus Core i3</a></li>
+                            <li><a  href="#">Asus Core i3</a></li>
                             <li><a href="#">Asus Core i5</a></li>
                             <li><a href="#">Asus Core i7</a></li>
                             <li><a href="#">Asus Core i3</a></li>
