@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Header</title>
   <link rel="stylesheet" href="/css/header.css">
-
-
 </head>
 <body>
   <header>
@@ -23,7 +21,6 @@
       </form>
   </div>
 </div>
-
     <div class="user-info">
     <?php
       session_start();

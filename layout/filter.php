@@ -3,34 +3,34 @@
 <head>
     <title>Laptop Filter</title>
     <style>
-#filterForm {
-    margin: 0;
-    padding: 0;
-}
+        #filterForm {
+            margin: 0;
+            padding: 0;
+        }
 
-/* Apply flexbox to the form */
-#filterForm {
-    display: flex;
-    flex-wrap: wrap; /* Allows form elements to wrap to a new line if needed */
-}
+        /* Apply flexbox to the form */
+        #filterForm {
+            display: flex;
+            flex-wrap: wrap; /* Allows form elements to wrap to a new line if needed */
+        }
 
-/* Create a class for each form group (label + select) */
-.form-group {
-    display: flex; /* Make form groups appear in a row */
-    align-items: center; /* Vertically align items within the form group */
-    margin-right: 20px; /* Add some space between form groups, adjust as needed */
-}
+        /* Create a class for each form group (label + select) */
+        .form-group {
+            display: flex; /* Make form groups appear in a row */
+            align-items: center; /* Vertically align items within the form group */
+            margin-right: 20px; /* Add some space between form groups, adjust as needed */
+        }
 
-/* Style the label element */
-.form-group label {
-    margin-right: 5px; /* Add a small space between the label and select element */
-}
+        /* Style the label element */
+        .form-group label {
+            margin-right: 5px; /* Add a small space between the label and select element */
+        }
 
-/* Style the select element */
-.form-group select {
-    /* Add desired styles for the select element, e.g., width, border, etc. */
-    width: 150px; /* Set a specific width for the select element, adjust as needed */
-}
+        /* Style the select element */
+        .form-group select {
+            /* Add desired styles for the select element, e.g., width, border, etc. */
+            width: 150px; /* Set a specific width for the select element, adjust as needed */
+        }
         body {
             max-width: 1200px;
             margin: 0 auto;
