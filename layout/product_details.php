@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/laptop_detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <header><?php include "header.php"; ?></header>
@@ -21,15 +22,8 @@
 
     // Check if the 'id' parameter exists in the URL
     if (isset($_GET['id'])) {
-        // Sanitize the input to prevent SQL injection
-        $laptop_id = sanitize_input($_GET['id']);
-
-        // Perform the SQL query to fetch laptop details with the given id
-        $sql = "SELECT `id`, `laptop_name`, `brand`, `processor`, `screen_size`, `graphics_card`, `ram`, `storage_capacity`, `operating_system`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `id` = $laptop_id";
-
-        // Execute the query and fetch the laptop details
-        $result = $conn->query($sql);
-
+        // Lấy Thông tin của laptop đó dựa trên id mà laptop mà đã bấm
+        include 'select-sql/laptop-detail-info.php';
         // Check if a laptop with the given id exists in the database
         if ($result && $result->num_rows > 0) {
             $row = $result->fetch_assoc();
@@ -64,13 +58,68 @@
                         <input type="submit" value="Add to Cart">
                     </form>
                 </div>
+                <?php  include 'select-sql/rating-review.php' ;?>
+                <form class="rating-review">
+                    <div class="star-total-total">
+                        <h1 class="name-total">Tổng số lượt đánh giá</h1>
+                        <h1 class="number-rating-total" ><?php echo $total_ratings; ?></h1>
+                    </div>
+                    <div class="break-down">
+                        <div class="star-rating">
+                            <span>5 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <h1 class="number-rating"><?php echo $ratings_5; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>4 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_4; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>3 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_3; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>2 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_2; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>1 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_1; ?></h1>
+                        </div>
+                    </div>
+                </form>
                 <div class="comment-form">
                     <h3>Add Your Comment</h3>
                     <form action="/action/add_comment.php" method="post">
                         <input type="hidden" name="laptop_id" value="<?php echo $laptop_id; ?>">
                         <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
-                        <!-- Display the username if the user is logged in -->
-                        <p><strong>Username:</strong> <?php echo $_SESSION['username']; ?></p>
+                        <?php if (!empty($_SESSION['username'])) : ?>
+                            <p><strong>Username:</strong> <?php echo $_SESSION['username']; ?></p>
+                        <?php endif; ?>
                         <label for="rating">Rating:</label>
                         <select name="rating" id="rating">
                             <option value="5">5 Stars</option>
@@ -87,28 +136,80 @@
                     </form>
                 </div>
             <?php else : ?>
-                <!-- Show a window alert with an error message if the user is not logged in -->
-                <script>
-                    alert('You need to log in to submit a comment.');
-                </script>
+                <div class="add-to-cart-form">
+                    <form action="/action/add_to_cart.php" method="post">
+                        <input type="hidden" name="laptop_id" value="<?php echo $row['id']; ?>">
+                        <input type="hidden" name="user_id" value="">
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="10" disabled>
+                        <p>Bạn cần đăng nhập để thêm sản phẩm giỏ hàng</p>
+                    </form>
+                </div>
+                <?php  include 'select-sql/rating-review.php' ;?>
+
+                <form class="rating-review">
+                    <div class="star-total-total">
+                        <h1 class="name-total">Tổng số lượt đánh giá</h1>
+                        <h1 class="number-rating-total" ><?php echo $total_ratings; ?></h1>
+                    </div>
+                    <div class="break-down">
+                        <div class="star-rating">
+                            <span>5 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <h1 class="number-rating"><?php echo $ratings_5; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>4 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_4; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>3 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_3; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>2 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_2; ?></h1>
+                        </div>
+                        <div class="star-rating">
+                            <span>1 sao : </span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <h1 class="number-rating"><?php echo $ratings_1; ?></h1>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+                <div class="comment-form-no-login">
+                    <h3>Add Your Comment</h3>
+                    <p>Bạn cần đăng nhập để comment</p>
+                </div>
             <?php endif; ?>
+            
             <?php
-
-            function get_comments_with_fullname($laptop_id) {
-                global $conn;
-                $laptop_id = sanitize_input($laptop_id);
-                $sql = "SELECT bl.`id_nguoi_dung`, bl.`rating`, bl.`noi_dung`, u.`full_name` 
-                        FROM `binh_luan_laptop` bl
-                        INNER JOIN `users` u ON bl.`id_nguoi_dung` = u.`user_id`
-                        WHERE bl.`laptop_id` = $laptop_id
-                        ORDER BY bl.`id` DESC";
-                $result = $conn->query($sql);
-                return $result->fetch_all(MYSQLI_ASSOC);
-            }
-
-            // Get comments for the current laptop with full names
-            $comments = get_comments_with_fullname($laptop_id);
-
+            // Đường dẫn lấy link truy vấn comment của laptop
+            include 'select-sql/comment.php';
             // Display comments
             if (!empty($comments)) {
                 $comments_per_page = 5;
@@ -143,21 +244,21 @@
                 }
                 echo '</div>';
             } else {
-                echo '<p>No comments yet.</p>';
+                echo '<p>Hiện không có comment nào</p>';
             }
             ?>            
                         <?php
                         echo "</div>";
                     } else {
                         // If no laptop with the given id is found, display an error message or redirect to a 404 page.
-                        echo "<p>Laptop not found.</p>";
+                        echo "<p>Không tìm thấy laptop</p>";
                     }
 
                     // Close the database connection
                     $conn->close();
                 } else {
                     // If the 'id' parameter is not provided, display an error message or redirect to a 404 page.
-                    echo "<p>Invalid request. Laptop ID not provided.</p>";
+                    echo "<p>Yêu cầu không hợp lệ. ID máy tính xách tay không được cung cấp</p>";
                 }
                 ?>
     </div>
