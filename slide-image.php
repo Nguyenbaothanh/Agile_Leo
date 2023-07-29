@@ -7,109 +7,108 @@
 <body>
     <div id="mainnav">
         <ul>
-            <li class="thefirst"><a href="#">Laptop MỚI CHÍNH HÃNG</a>
+            <li class="thefirst"><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Laptop MỚI CHÍNH HÃNG</a>
                 <ul class="sub-menu">
-                    <li><a value="branch" href="#">Asus</a>
+                    <li><a  href="/layout/laptop.php?brand=asus">Asus</a>
                         <ul class="sub-menu2">
-                            <li><a  href="#">Asus Core i3</a></li>
-                            <li><a href="#">Asus Core i5</a></li>
-                            <li><a href="#">Asus Core i7</a></li>
-                            <li><a href="#">Asus Core i3</a></li>
-                            <li><a href="#">Asus Core i9</a></li>
-                            <li><a href="#">Asus Vivobook</a></li>
-                            <li><a href="#">Asus ROG</a></li>
-                            <li><a href="#">Asus Zenbook</a></li>
-                            <li><a href="#">Asus TUF</a></li>
-                            <li><a href="#">Asus Expertbook</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Asus Core i3</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i5">Asus Core i5</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i7">Asus Core i7</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i9">Asus Core i9</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Asus Vivobook</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=ROG">Asus ROG</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Zenbook">Asus Zenbook</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=TUF">Asus TUF</a></li>
+                            <li><a href="laptop.php?model=asus-Expertbook">Asus Expertbook</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Dell</a>
+                    <li><a href="/layout/laptop.php?brand=Dell">Dell</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Dell Core i3</a></li>
-                            <li><a href="#">Dell Core i5</a></li>
-                            <li><a href="#">Dell Core i7</a></li>
-                            <li><a href="#">Dell Core i9</a></li>
-                            <li><a href="#">Dell Inspiron</a></li>
-                            <li><a href="#">Dell XPS</a></li>
-                            <li><a href="#">Dell Latitude</a></li>
-                            <li><a href="#">Dell AMD Ryzen 3</a></li>
-                            <li><a href="#">Dell AMD Ryzen 5</a></li>
-                            <li><a href="#">Dell Vostro</a></li>
-                            <li><a href="#">Dell Alienware</a></li>
-                            <li><a href="#">Dell Precision</a></li>
+                            <li><a href="/layout/laptop.php?brand=Dell&processor=core i3">Dell Core i3</a></li>
+                            <li><a href="/layout/laptop.php?brand=Dell&processor=core i5">Dell Core i5</a></li>
+                            <li><a href="/layout/laptop.php?brand=Dell&processor=core i7">Dell Core i7</a></li>
+                            <li><a href="/layout/laptop.php?brand=Dell&processor=core i9">Dell Core i9</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Inspiron</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell XPS</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Latitude</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell AMD Ryzen 3</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell AMD Ryzen 5</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Vostro</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Alienware</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Precision</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Lenovo</a>
+                    <li><a href="/layout/laptop.php?brand=Dell">Lenovo</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Lenovo Core i3</a></li>
-                            <li><a href="#">Lenovo Core i5</a></li>
-                            <li><a href="#">Lenovo Core i7</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Lenovo Core i3</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Lenovo Core i5</a></li>
+                            <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Lenovo Core i7</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">HP</a>
+                    <li><a href="/layout/laptop.php?brand=HP">HP</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">HP Core i3</a></li>
-                            <li><a href="#">HP Core i5</a></li>
-                            <li><a href="#">HP Core i7</a></li>
-                            <li><a href="#">HP Pavilion</a></li>
-                            <li><a href="#">HP Envy</a></li>
-                            <li><a href="#">HP Elitebook</a></li>
-                            <li><a href="#">HP Spectre</a></li>
-                            <li><a href="#">HP Victus</a></li>
-                            <li><a href="#">HP Omen</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&processor=core i3">HP Core i3</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&processor=core i5">HP Core i5</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&processor=core i7">HP Core i7</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Pavilion</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Envy</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Elitebook</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Spectre</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Victus</a></li>
+                            <li><a href="/layout/laptop.php?brand=HP&laptop_name=Vivobook">HP Omen</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">MSI</a>
+                    <li><a href="/layout/laptop.php?brand=MSI">MSI</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">MSI Bravo</a></li>
-                            <li><a href="#">MSI Modern</a></li>
-                            <li><a href="#">MSI Katana</a></li>
-                            <li><a href="#">MSI Creator</a></li>
+                            <li><a href="/layout/laptop.php?brand=MSI&laptop_name=Bravo">MSI Bravo</a></li>
+                            <li><a href="/layout/laptop.php?brand=MSI&laptop_name=Modern">MSI Modern</a></li>
+                            <li><a href="/layout/laptop.php?brand=MSI&laptop_name=Katana">MSI Katana</a></li>
+                            <li><a href="/layout/laptop.php?brand=MSI&laptop_name=Creator">MSI Creator</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Acer</a>
+                    <li><a href="/layout/laptop.php?brand=Acer">Acer</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Acer Nitro</a></li>
-                            <li><a href="#">Acer Aspire</a></li>
-                            <li><a href="#">Acer Core i3</a></li>
-                            <li><a href="#">Acer Core i5</a></li>
-                            <li><a href="#">Acer Core i7</a></li>
-                            <li><a href="#">Acer Swift</a></li>
-                            <li><a href="#">Acer Predator</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&processor=core i3">Acer Core i3</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&processor=core i5">Acer Core i5</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&processor=core i7">Acer Core i7</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&laptop_name=Nitro">Acer Nitro</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&laptop_name=Aspire">Acer Aspire</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&laptop_name=Swift">Acer Swift</a></li>
+                            <li><a href="/layout/laptop.php?brand=Acer&laptop_name=Predator">Acer Predator</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Macbook</a>
+                    <li><a href="/layout/laptop.php?brand=Macbook">Macbook</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Macbook Air 2020</a></li>
-                            <li><a href="#">Macbook Pro 2020</a></li>
-                            <li><a href="#">Macbook Air M1</a></li>
-                            <li><a href="#">Macbook Pro M1</a></li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Air 2020">Macbook Air 2020</a></li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Pro 2020">Macbook Pro 2020</a></li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Air M1">Macbook Air M1</a></li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Pro M1">Macbook Pro M1</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">LG</a>
+                    <li><a href="/layout/laptop.php?brand=LG&laptop_name=Vivobook">LG</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">LG Gram</a></li>
-                            <li><a href="#">LG Ultra</a></li>
+                            <li><a href="/layout/laptop.php?brand=LG&laptop_name=Gram">LG Gram</a></li>
+                            <li><a href="/layout/laptop.php?brand=LG&laptop_name=Ultra">LG Ultra</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">GIGABYTE</a>
+                    <li><a href="/layout/laptop.php?brand=GIGABYTE&laptop_name=Vivobook">GIGABYTE</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">GIGABYTE Aero</a></li>
-                            <li><a href="#">GIGABYTE Aorus</a></li>
+                            <li><a href="/layout/laptop.php?brand=GIGABYTE&laptop_name=Aero">GIGABYTE Aero</a></li>
+                            <li><a href="/layout/laptop.php?brand=GIGABYTE&laptop_name=Aorus">GIGABYTE Aorus</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Samsung Galaxy</a>
+                    <li><a href="/layout/laptop.php?brand=Samsung">Samsung</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Samsung Galaxy Book Flex</a></li>
-                            <li><a href="#">Samsung Galaxy Book Ion</a></li>
-                            <li><a href="#">Samsung Galaxy Book S</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Flex">Samsung Galaxy Book Flex</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Ion">Samsung Galaxy Book Ion</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book S">Samsung Galaxy Book S</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Huawei</a>
+                    <li><a href="/layout/laptop.php?brand=Huawei">Huawei</a>
                         <ul class="sub-menu2">
-                            <li><a href="#">Huawei MateBook X Pro</a></li>
-                            <li><a href="#">Huawei MateBook 13</a></li>
-                            <li><a href="#">Huawei MateBook D</a></li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook X Pro">Huawei MateBook X Pro</a></li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook 13">Huawei MateBook 13</a></li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook D">Huawei MateBook D</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -137,36 +136,8 @@
     </div></div>
     
 
-    <script>
-        // JavaScript cho chuyển đổi ảnh trong slideshow
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    <script src="/js/slide-image.js">
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-        setInterval(function () {
-            plusSlides(1);
-        }, 30000);
     </script>
 </body>
 </html>

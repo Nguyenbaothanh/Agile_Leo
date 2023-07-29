@@ -41,7 +41,7 @@ include_once 'index_process.php'; ?>
                     echo "<img src='img/laptop.png' alt='Default Image'>";
                 }
                 echo "<p><strong>" . $row['laptop_name'] . "</strong></p>";
-                echo "<p>" . $row['price_range'] . "</p>";
+                echo "<p>" . $row['price_range'] . " đ</p>";
                 echo "</a>";
                 echo "</div>";
             }
