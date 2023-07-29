@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Header</title>
   <link rel="stylesheet" href="/css/header.css">
-
-
 </head>
 <body>
   <header>
@@ -23,7 +21,6 @@
       </form>
   </div>
 </div>
-
     <div class="user-info">
     <?php
       session_start();
@@ -36,11 +33,11 @@
             <li><a href="profile.php">Thông tin người dùng</a></li>
             
             <?php if ($_SESSION['type'] === 'user') : ?>
-              <li><a href="/cart.php">Giỏ hàng</a></li>
+              <li><a href="cart.php">Giỏ hàng</a></li>
             <?php endif; ?>
             <?php if ($_SESSION['type'] === 'admin') : ?>
               <li><a href="admin_dashboard.php">Dashboard Admin</a></li>
-              <li><a href="/cart.php">Giỏ hàng</a></li>
+              <li><a href="cart.php">Giỏ hàng</a></li>
 
             <?php endif; ?>
             <li><a href="logout.php">Đăng xuất</a></li>

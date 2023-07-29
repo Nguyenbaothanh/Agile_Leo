@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.remove-product img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.quantity-action-btn-increase,
+.quantity-action-btn-decrease {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.quantity-action-btn-increase:hover,
+.quantity-action-btn-decrease:hover {
+    background-color: #0056b3;
+}
+
+#totalPriceDisplay {
+    text-align: right;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#paymentButton {
+    background-color: #4CAF50;
+    /* Màu nền của nút */
+    color: white;
+    /* Màu chữ của nút */
+    padding: 10px 20px;
+    /* Kích thước nút */
+    border: none;
+    /* Loại bỏ đường viền */
+    border-radius: 4px;
+    /* Bo góc nút */
+    cursor: pointer;
+    /* Đổi con trỏ chuột thành bàn tay khi di chuột vào nút */
+    float: right;
+    /* Dịch nút sang bên phải */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
