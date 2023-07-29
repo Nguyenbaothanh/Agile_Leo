@@ -10,7 +10,7 @@
 /* Style for each laptop item */
 
 .laptop {
-    width: calc(20% - 20px);
+    width: 25%;
     /* Adjust the width as needed */
     border: 1px solid #ddd;
     padding: 10px;
@@ -22,8 +22,8 @@
 /* Style for the laptop image */
 
 .laptop img {
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    height: 250px;
 }
 
 
