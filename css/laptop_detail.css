@@ -20,7 +20,7 @@
 }
 
 .add-to-cart-form {
-    background-color: #fff;
+    background-color: #740e0e;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -61,7 +61,7 @@ input[type="number"] {
 
 input[type="submit"] {
     background-color: #0080ff;
-    color: #fff;
+    color: #12076e;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -70,4 +70,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0058b3;
+}
+.checked {
+    color: orange;
+}
+.break-down{
+    position: relative;
+    display: flexbox;
+    
 }
