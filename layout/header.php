@@ -20,7 +20,10 @@
           <button type="submit" name="search">Tìm kiếm</button>
       </form>
   </div>
-</div>
+  </div>
+  <div class="notifications">
+        <a href="/layout/show-notifications.php">Chương trình Khuyến Mãi</a>
+  </div>
     <div class="user-info">
     <?php
       session_start();

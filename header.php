@@ -23,6 +23,9 @@
       </form>
   </div>
 </div>
+<div class="notifications">
+        <a href="/layout/show-notifications.php">Chương trình Khuyến Mãi</a>
+  </div>
     <div class="user-info">
     <?php
       session_start();
