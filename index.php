@@ -67,5 +67,5 @@ include_once 'index_process.php'; ?>
         ?>
     </div>
     <footer><?php include_once 'footer.php'; ?></footer>
-</body>
+</body>~
 </html>
