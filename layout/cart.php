@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/cart.css">
 </head>
 <body>
-    <header><?php include "header.php"; ?></header>
+<header><?php include "header.php"; ?></header>
+
     <main>
     <?php
     // cart.php
@@ -33,9 +34,10 @@
         if ($result && $result->num_rows > 0) {
             // Initialize a variable to keep track of the total price
             $totalPrice = 0;
+            echo "<div class='cart-shopping'>";
 
             echo "<h2>Giỏ Hàng</h2>";
-            echo "<table>";
+            echo "<table class='cart-shopping'>";
             echo "<tr><th>Tên Laptop</th><th>Giá tiền</th><th>Số lượng</th><th>Xóa</th></tr>";
             while ($row = $result->fetch_assoc()) {
                 $laptop_id = $row['laptop_id'];
@@ -63,12 +65,12 @@
                 echo "</td>";
                 echo "<td class='remove-product'><a href='/action/remove_product_cart.php?delete_laptop_id=$laptop_id'><img src='/img/remove_product.jpg' alt='Remove'></a></td>";
                 echo "</tr>";
-                
             }
             echo "</table>";
 
             // Hiển thị tổng giá tiền
-            echo "<p id='totalPriceDisplay'>Total Price: $totalPrice</p>";
+            echo "<p id='totalPriceDisplay'>Tổng Tiển: $totalPrice</p>";
+            echo "</div>";
         } else {
             echo "<p>Your shopping cart is empty.</p>";
         }
@@ -76,22 +78,18 @@
         echo "<p>User not logged in. Please log in to view the shopping cart.</p>";
     }
     ?>
-    <button id="paymentButton" onclick="openModal('cart')">Proceed to Payment</button>
-    <div id="modal-login" class="modal" style="display: none;">
-    <div class="modal-content">
-        <?php include 'Pay-up.php'; ?>
+        <!-- HTML -->
+    <button class="paymentButton" onclick="openmodalpay('cart')">Proceed to Payment</button>
+    <div id="modal-cart" class="modal-pay">
+        <div class="modal-content-pay">
+    <?php include 'pay-up.php' ?>
     </div>
-    </div>
+</div>
+</main>
+<footer><?php include "footer.php"; ?></footer>
 
-    </main>
-    <footer><?php include "footer.php"; ?></footer>
+<script src="/js/cart.js"></script>
 
-
-
-    <script src="/js/cart.js">
-    // JavaScript code for quantity update
-    
-</script>
 
 </body>
 </html>
