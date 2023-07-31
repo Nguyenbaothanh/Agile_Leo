@@ -13,6 +13,7 @@
             <li><a href="display_laptop.php">Quản lí sản phẩm</a></li>
             <li><a href="display_order.php">Quản lí đơn hàng</a></li>
             <li><a href="display_khuyen_mai.php">Quản lí mã khuyến mãi</a></li>
+            <li><a href="display_promotions.php">Quản lí chương trình khuyến mãi</a></li>
 
         </ul>
     </nav>
