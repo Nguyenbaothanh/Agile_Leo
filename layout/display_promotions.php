@@ -18,11 +18,10 @@
     </nav>
     <h1>Danh sách chương trình khuyến mãi</h1>
 
-    <a href="add_promotions.php">Thêm chương trình khuyến mãi</a>
+<a class="add_promotions" href="add_promotions.php">Thêm chương trình khuyến mãi</a>
 
     <table border="1">
         <tr>
-            <th>ID</th>
             <th>Tiêu đề</th>
             <th>Nội dung</th>
             <th>Hình ảnh</th>

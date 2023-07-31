@@ -33,7 +33,7 @@
         <label>Ngày kết thúc:</label><br>
         <input type="date" name="end_date" value="<?php echo $row['end_date']; ?>" required><br><br>
         <input  type="submit" value="Lưu">
-        <a href="display_promotions.html">Quay lại danh sách</a>
+        <a href="display_promotions.php">Quay lại danh sách</a>
 
     </form>
     <?php

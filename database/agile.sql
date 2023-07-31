@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 30, 2023 lúc 06:22 AM
+-- Thời gian đã tạo: Th7 31, 2023 lúc 06:49 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -103,6 +103,83 @@ INSERT INTO `laptops` (`id`, `laptop_name`, `brand`, `processor`, `screen_size`,
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `ma_khuyen_mai`
+--
+
+CREATE TABLE `ma_khuyen_mai` (
+  `id_ma_khuyen_mai` int(11) NOT NULL,
+  `ten_khuyen_mai` varchar(255) NOT NULL,
+  `so_tien_toi_thieu` decimal(10,0) NOT NULL,
+  `ngay_bat_dau` date NOT NULL,
+  `ngay_het_han` date NOT NULL,
+  `so_tien_khuyen_mai` decimal(10,0) NOT NULL
+) ;
+
+--
+-- Đang đổ dữ liệu cho bảng `ma_khuyen_mai`
+--
+
+INSERT INTO `ma_khuyen_mai` (`id_ma_khuyen_mai`, `ten_khuyen_mai`, `so_tien_toi_thieu`, `ngay_bat_dau`, `ngay_het_han`, `so_tien_khuyen_mai`) VALUES
+(1, 'SUMMER102', 50000, '2023-08-01', '2023-08-31', 10000),
+(2, 'FALL20', 100000, '2023-09-01', '2023-09-30', 20000),
+(4, 'Promo1', 1, '2023-08-01', '2023-08-31', 2),
+(5, 'Promo2', 2, '2023-08-15', '2023-09-15', 3),
+(6, 'Promo3', 3, '2023-09-01', '2023-09-30', 3),
+(7, 'Promo4', 3, '2023-09-15', '2023-10-15', 3),
+(8, 'Promo20', 2, '2023-12-01', '2023-12-31', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `order_date` datetime NOT NULL,
+  `total_amount` decimal(10,0) NOT NULL,
+  `promotion_code_id` int(11) DEFAULT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_address` varchar(255) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `message` text DEFAULT NULL,
+  `order_status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `user_id`, `order_date`, `total_amount`, `promotion_code_id`, `user_name`, `user_address`, `payment_method`, `message`, `order_status`) VALUES
+(1, 2, '2023-07-31 22:14:53', 0, 0, 'admin123', '456 Admin Avenue', 'credit_card', '', 'Shipped'),
+(3, 2, '2023-07-31 17:48:10', 1, 8, 'admin123', '456 Admin Avenue', 'credit_card', '12', 'Confirmed');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `promotions`
+--
+
+CREATE TABLE `promotions` (
+  `id_promotions` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `image_path` varchar(255) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `promotions`
+--
+
+INSERT INTO `promotions` (`id_promotions`, `title`, `content`, `image_path`, `start_date`, `end_date`) VALUES
+(1, 'He', 'ad', 'img/hinh-nen-4k-bai-bien-nguyen-scaled.jpg', '2023-05-30', '2023-07-30');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `shopping_cart`
 --
 
@@ -113,14 +190,6 @@ CREATE TABLE `shopping_cart` (
   `quantity` int(11) NOT NULL,
   `timestamp` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `shopping_cart`
---
-
-INSERT INTO `shopping_cart` (`cart_id`, `user_id`, `laptop_id`, `quantity`, `timestamp`) VALUES
-(4, 2, 13, 1, '2023-07-27 08:27:24'),
-(5, 2, 12, 1, '2023-07-27 08:46:58');
 
 -- --------------------------------------------------------
 
@@ -166,6 +235,25 @@ ALTER TABLE `laptops`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `ma_khuyen_mai`
+--
+ALTER TABLE `ma_khuyen_mai`
+  ADD PRIMARY KEY (`id_ma_khuyen_mai`);
+
+--
+-- Chỉ mục cho bảng `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Chỉ mục cho bảng `promotions`
+--
+ALTER TABLE `promotions`
+  ADD PRIMARY KEY (`id_promotions`);
+
+--
 -- Chỉ mục cho bảng `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
@@ -196,10 +284,28 @@ ALTER TABLE `laptops`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
+-- AUTO_INCREMENT cho bảng `ma_khuyen_mai`
+--
+ALTER TABLE `ma_khuyen_mai`
+  MODIFY `id_ma_khuyen_mai` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `promotions`
+--
+ALTER TABLE `promotions`
+  MODIFY `id_promotions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -210,6 +316,12 @@ ALTER TABLE `users`
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
+
+--
+-- Các ràng buộc cho bảng `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
 -- Các ràng buộc cho bảng `shopping_cart`
