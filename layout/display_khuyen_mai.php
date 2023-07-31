@@ -12,11 +12,21 @@ $result = $conn->query($sql);
 <html>
 <head>
     <title>Danh sách mã khuyến mãi</title>
-    <link rel="stylesheet" type="text/css" href="/css/add_khuyen_mai.css">
+    <link rel="stylesheet" type="text/css" href="/css/display_khuyen_mai.css">
 </head>
 <body>
-    <h2>Danh sách mã khuyến mãi</h2>
-    <a href="add_khuyen_mai.php">Thêm mã khuyến mãi</a>
+    <nav class="vertical navigation">
+        <h2 style=color:#fff;>Menu</h2>
+        <ul>
+            <li><a href="/index.php">Trang chủ </a></li>
+            <li><a href="display_users.php">Quản lí người dùng</a></li>
+            <li><a href="display_laptop.php">Quản lí sản phẩm</a></li>
+            <li><a href="display_order.php">Quản lí đơn hàng</a></li>
+            <li><a href="display_khuyen_mai.php">Quản lí mã khuyến mãi</a></li>
+        </ul>
+    </nav>
+    <div class="content"><h2>Danh sách mã khuyến mãi</h2>
+    <a class="add_km" href="add_khuyen_mai.php">Thêm khuyến mãi</a>
     <table>
         <tr>
             <th>ID</th>
@@ -47,6 +57,7 @@ $result = $conn->query($sql);
             echo "<tr><td colspan='8'>Không có mã khuyến mãi.</td></tr>";
         }
         ?>
-    </table>
+    </table></div>
+    
 </body>
 </html>

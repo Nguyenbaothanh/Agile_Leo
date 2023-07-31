@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thêm chương trình khuyến mãi</title>
-  <link rel="stylesheet" href="/css/notifications.css">
+  <link rel="stylesheet" href="/css/add_promotions.css">
 </head>
 <body>
-  <div class="container">
+  <div class="add_notification">
     <h1>Thêm chương trình khuyến mãi</h1>
     <form action="/action/process_promotion.php" method="POST" enctype="multipart/form-data">
       <label for="title">Tiêu đề:</label>
@@ -21,6 +21,7 @@
       <label for="end_date">Ngày kết thúc:</label>
       <input type="date" id="end_date" name="end_date" required>
       <button type="submit">Thêm chương trình</button>
+      <a class="back-notificaions" href="display_notificaions.php">Quay về trang tạo chương trình khuyến mãi</a>
     </form>
   </div>
 </body>

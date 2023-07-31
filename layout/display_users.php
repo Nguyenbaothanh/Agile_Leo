@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="/css/displayusers.css">
 </head>
 <body>
-<nav class="vertical navigation">
+    <nav class="vertical navigation">
         <h2 style=color:#fff;>Menu</h2>
         <ul>
             <li><a href="/index.php">Trang chủ </a></li>
             <li><a href="display_users.php">Quản lí người dùng</a></li>
             <li><a href="display_laptop.php">Quản lí sản phẩm</a></li>
             <li><a href="display_order.php">Quản lí đơn hàng</a></li>
+            <li><a href="display_khuyen_mai.php">Quản lí mã khuyến mãi</a></li>
         </ul>
     </nav>
     <div class="danhsachnguoidung"><h1>Danh sách người dùng</h1>
@@ -61,10 +62,8 @@
             <?php include 'add_user.php'; ?>
         </div>
     </div>
-</div>
-    
-    <!-- JavaScript để xử lý hiển thị và ẩn modal box -->
-    <script src="/js/display_user.js" >
+    </div>
+        <script src="/js/display_user.js" >
         
     </script>
 </body>
