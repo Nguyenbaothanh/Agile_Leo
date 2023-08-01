@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($is_cart_items_deleted) {
                 // Redirect to a thank-you page or any other appropriate page after successful order placement
-                header("Location: cart.php");
+                echo "<script>window.location = '/layout/cart.php'; </script>";
                 exit;
             } else {
                 echo "Failed to clear shopping cart.";

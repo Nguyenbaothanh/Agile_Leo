@@ -40,10 +40,13 @@
             
             <?php if ($_SESSION['type'] === 'user') : ?>
               <li><a href="cart.php">Giỏ hàng</a></li>
+              <li><a href="order-user.php">Đơn hàng đã đặt</a></li>
+
             <?php endif; ?>
             <?php if ($_SESSION['type'] === 'admin') : ?>
               <li><a href="admin_dashboard.php">Dashboard Admin</a></li>
               <li><a href="cart.php">Giỏ hàng</a></li>
+              <li><a href="order-user.php">Đơn hàng đã đặt</a></li>
 
             <?php endif; ?>
             <li><a href="logout.php">Đăng xuất</a></li>

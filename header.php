@@ -41,10 +41,12 @@
             <li><a href="/layout/profile.php">Thông tin người dùng</a></li>       
             <?php if ($_SESSION['type'] === 'user') : ?>
               <li><a href="/layout/cart.php">Giỏ hàng</a></li>
+              <li><a href="/layout/order-user.php">Đơn hàng đã đặt</a></li>
             <?php endif; ?>
             <?php if ($_SESSION['type'] === 'admin') : ?>
               <li><a href="/layout/admin_dashboard.php">Dashboard Admin</a></li>
               <li><a href="/layout/cart.php">Giỏ hàng</a></li>
+              <li><a href="/layout/order-user.php">Đơn hàng đã đặt</a></li>
             <?php endif; ?>
             <li><a href="/layout/logout.php">Đăng xuất</a></li>
           </ul>
