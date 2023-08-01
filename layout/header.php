@@ -22,7 +22,7 @@
   </div>
   </div>
   <div class="notifications">
-        <a href="/layout/show-notifications.php">Chương trình khuyến Mãi</a>
+        <a href="/layout/show-notifications.php">Chương trình khuyến mãi</a>
   </div>
   <div class="fiter">
         <a href="/layout/filter.php">Bộ lọc tìm kiếm</a>
