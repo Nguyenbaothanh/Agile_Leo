@@ -22,7 +22,7 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $itemsPerPage;
 
 // Truy vấn cơ sở dữ liệu để lấy thông tin chương trình khuyến mãi
-$sql = "SELECT `id_notification`, `image_path`, `start_date`, `end_date`, `title` FROM `promotions` LIMIT $start, $itemsPerPage";
+$sql = "SELECT `id_promotions`, `image_path`, `start_date`, `end_date`, `title` FROM `promotions` LIMIT $start, $itemsPerPage";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {?>
        <!-- Inside the PHP while loop -->
     <div class='show-notification'>
-        <a href='promotion_details.php?id=<?= $row['id_notification'] ?>'>
+        <a href='promotion_details.php?id=<?= $row['id_promotions'] ?>'>
             <div class="notification-content">
                 <div class="image-container">
                     <img src='/action/<?= $row['image_path'] ?>' alt='<?= $row['title'] ?>' style='max-width: 200px;'>
