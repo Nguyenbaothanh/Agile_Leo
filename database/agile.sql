@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 31, 2023 lúc 06:49 PM
+-- Thời gian đã tạo: Th8 01, 2023 lúc 06:15 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -49,7 +49,8 @@ INSERT INTO `binh_luan_laptop` (`id`, `id_nguoi_dung`, `laptop_id`, `rating`, `n
 (6, 11, 17, 5, 'd', '2023-07-27'),
 (7, 11, 17, 5, 'm', '2023-07-27'),
 (8, 11, 17, 5, 'd', '2023-07-27'),
-(9, 11, 17, 5, 'dd', '2023-07-27');
+(9, 11, 17, 5, 'dd', '2023-07-27'),
+(10, 11, 12, 5, '14', '2023-08-01');
 
 -- --------------------------------------------------------
 
@@ -153,7 +154,9 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`order_id`, `user_id`, `order_date`, `total_amount`, `promotion_code_id`, `user_name`, `user_address`, `payment_method`, `message`, `order_status`) VALUES
 (1, 2, '2023-07-31 22:14:53', 0, 0, 'admin123', '456 Admin Avenue', 'credit_card', '', 'Shipped'),
-(3, 2, '2023-07-31 17:48:10', 1, 8, 'admin123', '456 Admin Avenue', 'credit_card', '12', 'Confirmed');
+(3, 2, '2023-07-31 17:48:10', 1, 8, 'admin123', '456 Admin Avenue', 'credit_card', '12', 'Confirmed'),
+(4, 11, '2023-08-01 05:59:58', 2, 0, 'user123', 'ghenhot12@gmail.com', 'credit_card', '4', 'pending'),
+(5, 11, '2023-08-01 06:03:29', 4, 0, 'user123', 'ghenhot12@gmail.com', 'credit_card', '', 'pending');
 
 -- --------------------------------------------------------
 
@@ -215,8 +218,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `username`, `password`, `full_name`, `sex`, `email`, `address`, `type`) VALUES
 (2, 'admin123', 'adminpassword', 'Admin Smith1', 'Male', 'admin@example.com', '456 Admin Avenue', 'admin'),
 (11, 'user123', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho1222@gmail.com2', 'ghenhot12@gmail.com', 'user'),
-(12, 'user123222', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho12@gmail.com222', '295 Phạm Thế Hiển Phường 3 Quận 8', 'user'),
-(13, 'user12333', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho12@gmail.com', 'ghenhot12@gmail.com', 'user');
+(12, 'user123222', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho12@gmail.com222', '295 Phạm Thế Hiển Phường 3 Quận 8', 'user');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -275,7 +277,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `binh_luan_laptop`
 --
 ALTER TABLE `binh_luan_laptop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `laptops`
@@ -293,7 +295,7 @@ ALTER TABLE `ma_khuyen_mai`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `promotions`
@@ -305,7 +307,7 @@ ALTER TABLE `promotions`
 -- AUTO_INCREMENT cho bảng `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
