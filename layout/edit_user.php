@@ -23,10 +23,12 @@
             <form action="/action/process_edit_user.php" method="POST">
                 <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                 <label for="username">Tên đăng nhập:</label>
-                <input type="text" id="username" name="username" value="<?php echo $row['username']; ?>" required>
+                <input type="text" disabled id="username" name="username" value="<?php echo $row['username']; ?>" required>
                 <br>
                 <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" value="<?php echo $row['password']; ?>">
+                <input type="checkbox" onclick="togglePassword()"> Show password
+
                 <br>
                 <label for="full_name">Họ và tên:</label>
                 <input type="text" id="full_name" name="full_name" value="<?php echo $row['full_name']; ?>">
@@ -58,5 +60,7 @@
 
     $conn->close();
     ?>
+    <script src="/js/show-password.js"></script>
 </body>
+
 </html>

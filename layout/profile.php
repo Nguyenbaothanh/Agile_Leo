@@ -12,15 +12,15 @@
     include_once 'header.php';
   
 ?></header>
-    <?php include 'checklogin.php' ?>
+<main><?php include 'checklogin.php' ?>
     <form action="/action/process_profile_update.php" method="post" class="profile-user">
     <input type="hidden" name="user_id" value="<?php echo $user_data['user_id']; ?>">
     <h1>Thông tin cá nhân</h1>
     <label for="username">Tên đăng nhập:</label>
-    <input type="text" id="username" name="username" value="<?php echo $user_data['username']; ?>" disabled>
+    <input type="text" disabled id="username" name="username" value="<?php echo $user_data['username']; ?>" disabled>
     <br>
-    <label for="password">Mật khẩu mới:</label>
-    <input type="password" id="password" name="password">
+    <label for="password">Mật khẩu</label>
+    <input type="password" id="password" name="password" value="<?php echo $user_data['password']; ?>">
     <br>
     <label for="full_name">Họ và tên:</label>
     <input type="text" id="full_name" name="full_name" value="<?php echo $user_data['full_name']; ?>">
@@ -38,11 +38,11 @@
     <input type="text" id="address" name="address" value="<?php echo $user_data['address']; ?>">
     <br>
 
-    <!-- Include a hidden input field to pass the user_id -->
-
     <input type="submit" value="Cập nhật">
-</form>
+</form></main>
+    
 
 <footer><?php include_once 'footer.php';  ?></footer>
+
 </body>
 </html>
