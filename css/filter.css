@@ -84,7 +84,7 @@ button[type="submit"] {
 
 #laptopsContainer img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
 }
 
 
@@ -155,4 +155,12 @@ button[type="submit"] {
 
 .fiter-laptop {
     color: black;
+}
+
+#laptopsContainer a {
+    text-decoration: none;
+    color: #000;
+    /* Black text color */
+    border: 1px solid #ccc;
+    /* Add a border to the anchor elements */
 }

@@ -70,7 +70,9 @@ header {
 a {
     margin-right: 10px;
     text-decoration: none;
-    color: #0c0000;
+    color: #ffffff;
+    font-weight: bold;
+    /* In đậm văn bản của đường dẫn */
 }
 
 .cart {

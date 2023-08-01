@@ -114,7 +114,7 @@ include 'header.php';
                     laptopLink.innerHTML = `
                         <img src="/action/${laptop.image_url}" alt="${laptop.laptop_name}">
                         <h2 class='filter-laptop'>${laptop.laptop_name}</h2>
-                        <p class='filter-laptop'>Price: $${laptop.price_range}</p>
+                        <p class='filter-laptop'> ${laptop.price_range} đ</p>
                     `;
 
                     // Append the laptop card to the laptops container

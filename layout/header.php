@@ -22,7 +22,10 @@
   </div>
   </div>
   <div class="notifications">
-        <a href="/layout/show-notifications.php">Chương trình Khuyến Mãi</a>
+        <a href="/layout/show-notifications.php">Chương trình khuyến Mãi</a>
+  </div>
+  <div class="fiter">
+        <a href="/layout/filter.php">Bộ lọc tìm kiếm</a>
   </div>
     <div class="user-info">
     <?php
