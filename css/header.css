@@ -165,7 +165,8 @@ a {
     border-radius: 15px;
     margin-left: 10px;
     text-align: center;
-    font-size: 13PX;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .modal {
@@ -189,11 +190,12 @@ a {
     padding: 20px;
 }
 
-.notifications{
+.notifications {
     background-color: #d52220;
     color: #f7f7f7;
     border: 2px solid #960404;
     border-radius: 15px;
     margin-left: 10px;
-    font-size: 13PX;;
+    font-size: 16PX;
+    font-weight: bold;
 }
