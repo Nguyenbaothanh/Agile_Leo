@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <a href="/index.php" class="logo"><img src="/img/WebLogo.png" style="width:180px"></a>
+    <a href="/index.php" class="logo"><img src="/img/WebLogo.png" style="width:70px"></a>
     <div class="parent-container">
     <div class="search-bar">
       <form action="/layout/search_laptop.php" method="post">
