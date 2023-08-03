@@ -13,7 +13,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: #4891bc;
+    background-color: #ee2624;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ header {
 .search-bar button {
     padding: 8px 16px;
     margin-left: 10px;
-    background-color: #285981;
+    background-color: #d52220;
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -70,8 +70,7 @@ header {
 a {
     margin-right: 10px;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+    color: black;
     /* In đậm văn bản của đường dẫn */
 }
 
@@ -149,14 +148,24 @@ a {
     width: 100px;
     height: 30px;
     background-color: transparent;
-    background-color: black;
+    background-color: #d52220;
     color: #f7f7f7;
-    border: 1px solid #960404;
+    border: 2px solid #960404;
     border-radius: 15px;
     cursor: pointer;
     margin-left: 10px;
     padding: 0 10px;
     /* Thêm các thuộc tính CSS tùy chỉnh cho auth-btn */
+}
+
+.fiter {
+    background-color: #d52220;
+    color: #f7f7f7;
+    border: 2px solid #960404;
+    border-radius: 15px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 13PX;
 }
 
 .modal {
@@ -180,6 +189,11 @@ a {
     padding: 20px;
 }
 
-.notifications {
-    margin-left: 20px;
+.notifications{
+    background-color: #d52220;
+    color: #f7f7f7;
+    border: 2px solid #960404;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 13PX;;
 }
