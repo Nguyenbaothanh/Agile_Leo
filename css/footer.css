@@ -16,13 +16,13 @@ main {
 }
 
 footer {
-    background-color: #32b8e0f6;
+    background-color: #27343e;
     padding: 10px;
     flex-shrink: 0;
     text-align: center;
 }
 
 .footer-index {
-    color: black;
+    color: white;
     font-weight: bold;
 }
