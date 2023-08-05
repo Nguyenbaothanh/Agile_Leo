@@ -49,7 +49,7 @@ if (isset($_SESSION['user_id'])) {
         echo "<body>";
         echo "<form class='pay-up' action='/action/process_order.php' method='post'>";
         echo "<table class='pay-up-table'>";
-        echo "<button class='close-button' onclick='closemodalpay(\"cart\")'>X</button>";
+
         echo "<tr><th>Tên Laptop</th><th>Giá tiền</th><th>Số lượng</th></tr>";
         $totalAmount = 0;
         while ($cart_row = $cart_result->fetch_assoc()) {
@@ -74,11 +74,11 @@ if (isset($_SESSION['user_id'])) {
         echo '<input type="hidden" name="user_id" value="' . $user_id . '">';
         echo "<label for='user_name'>Lời nhắn</label>";
         // Text area for messages
-        echo "<textarea name='message' placeholder='Lời nhắn'></textarea>";
-        echo "<label for='promotion_code'>Mã khuyến mãi</label>";
+        echo "<textarea class='pay-up-input' name='message' placeholder='Lời nhắn'></textarea>";
+        echo "<label  for='promotion_code'>Mã khuyến mãi</label>";
         // Promotional code input (dropdown menu)
-        echo "<select id='promotion_code' name='promotion_code'>";
-        echo "<option value=''>Chọn mã khuyến mãi (nếu có)</option>";
+        echo "<select class='pay-up-promotion' name='promotion_code'>";
+        echo "<option  value=''>Chọn mã khuyến mãi (nếu có)</option>";
         foreach ($promotionCodes as $code) {
             echo "<option value='{$code['id']}'>{$code['ten']} - Giảm {$code['so_tien_khuyen_mai']} VNĐ</option>";
         }
@@ -97,21 +97,22 @@ if (isset($_SESSION['user_id'])) {
             $address = $address_row['address'];
         }
         echo "<label for='user_address'>Địa chỉ</label>";
-        echo "<input type='text' name='user_address' placeholder='Địa chỉ' value='$address' id='user_address'>";
+        echo "<input class='pay-up-input' type='text' name='user_address' placeholder='Địa chỉ' value='$address' id='user_address'>";
 
         // User name (already fetched earlier)
-        echo "<label for='user_name'>Tên người dùng</label>";
-        echo "<input type='text' name='user_name' value='$user_name' style='width: 100%;'>";
+        echo "<label  for='user_name'>Tên người dùng</label>";
+        echo "<input class='pay-up-name' type='text' name='user_name' value='$user_name' style='width: 100%;'>";
 
         // Payment methods dropdown
         echo "<label for='payment_method'>Phương thức thanh toán</label>";
         echo "<select id='payment_method' name='payment_method'>";
-        echo "<option value='credit_card'>Thẻ tín dụng</option>";
-        echo "<option value='paypal'>PayPal</option>";
-        echo "<option value='cash_on_delivery'>Tiền mặt khi nhận hàng</option>";
+        echo "<option id='payment_method_option' value='credit_card'>Thẻ tín dụng</option>";
+        echo "<option id='payment_method_option'value='paypal'>PayPal</option>";
+        echo "<option id='payment_method_option'value='cash_on_delivery'>Tiền mặt khi nhận hàng</option>";
         echo "</select>";
         echo "<p name='totalAmount' id='total_amount'>Tổng tiền: " . number_format($totalAmount, 0, '', '.') . " VNĐ</p>";
         echo "<button type='submit' class='pay-button'>Thanh toán</button>";
+        echo "<a class='back-shopping-cart' href='cart.php'>Quay về giỏ hàng</a>";
         echo "</form>";
         echo "</body>";
     } else {
@@ -163,3 +164,5 @@ $(document).ready(function () {
 
 var promotionCodes = <?php echo json_encode(getAllPromotionCodes($conn, $totalAmount)); ?>;
 </script>
+
+

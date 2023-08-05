@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="/css/styles.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <header><?php include_once 'header.php'; ?></header>
@@ -12,39 +12,39 @@
         <?php
             include_once 'connect.php';
 
-// Check if the necessary parameters are provided in the URL
-if (isset($_GET['brand']) && isset($_GET['processor'])) {
-    // Validate and sanitize the input to prevent SQL injection
-    $brand = $_GET['brand'];
-    $processor = $_GET['processor'];
+            // Check if the necessary parameters are provided in the URL
+            if (isset($_GET['brand']) && isset($_GET['processor'])) {
+                // Validate and sanitize the input to prevent SQL injection
+                $brand = $_GET['brand'];
+                $processor = $_GET['processor'];
 
-    // Prepare and execute the SQL query to fetch laptop information
-    $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ? AND `processor` = ?");
-    $stmt->bind_param("ss", $brand, $processor);
-} elseif (isset($_GET['brand']) && isset($_GET['laptop_name'])) {
-    // Validate and sanitize the input to prevent SQL injection
-    $brand = $_GET['brand'];
-    $laptop_name = $_GET['laptop_name'];
+                // Prepare and execute the SQL query to fetch laptop information
+                $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ? AND `processor` = ?");
+                $stmt->bind_param("ss", $brand, $processor);
+            } elseif (isset($_GET['brand']) && isset($_GET['laptop_name'])) {
+                // Validate and sanitize the input to prevent SQL injection
+                $brand = $_GET['brand'];
+                $laptop_name = $_GET['laptop_name'];
 
-    // Prepare and execute the SQL query to fetch laptop information
-    // The SQL query will now use 'LIKE' to match laptop_name with any substring
-    $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ? AND `laptop_name` LIKE ?");
-    
-    // Append '%' to the laptop_name to match any substring
-    $laptop_name = '%' . $laptop_name . '%';
+                // Prepare and execute the SQL query to fetch laptop information
+                // The SQL query will now use 'LIKE' to match laptop_name with any substring
+                $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ? AND `laptop_name` LIKE ?");
+                
+                // Append '%' to the laptop_name to match any substring
+                $laptop_name = '%' . $laptop_name . '%';
 
-    $stmt->bind_param("ss", $brand, $laptop_name);
-} elseif (isset($_GET['brand'])) {
-    // Validate and sanitize the input to prevent SQL injection
-    $brand = $_GET['brand'];
+                $stmt->bind_param("ss", $brand, $laptop_name);
+            } elseif (isset($_GET['brand'])) {
+                // Validate and sanitize the input to prevent SQL injection
+                $brand = $_GET['brand'];
 
-    // Prepare and execute the SQL query to fetch laptop information
-    $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ?");
-    $stmt->bind_param("s", $brand);
-} else {
-    echo "Invalid parameters. Please provide 'brand' and 'processor' or 'brand' and 'laptop_name' values in the URL.";
-    exit;
-}
+                // Prepare and execute the SQL query to fetch laptop information
+                $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ?");
+                $stmt->bind_param("s", $brand);
+            } else {
+                echo "Invalid parameters. Please provide 'brand' and 'processor' or 'brand' and 'laptop_name' values in the URL.";
+                exit;
+            }
 
 
             // Execute the prepared statement
@@ -86,16 +86,26 @@ if (isset($_GET['brand']) && isset($_GET['processor'])) {
                 // Hiển thị page links
                 echo "<div class='pagination'>";
                 if ($currentPage > 1) {
-                    echo "<a class='page-link' href='?page=" . ($currentPage - 1) . "'>Previous</a> ";
+                    $queryParams = $_GET;
+                    $queryParams['page'] = $currentPage - 1;
+                    $queryString = http_build_query($queryParams);
+                    echo "<a class='page-link' href='?" . $queryString . "'>Previous</a> ";
                 }
-
+            
                 for ($page = 1; $page <= $totalPages; $page++) {
-                    echo "<a class='page-link' href='?page=" . $page . "'>" . $page . "</a> ";
+                    $queryParams = $_GET;
+                    $queryParams['page'] = $page;
+                    $queryString = http_build_query($queryParams);
+                    echo "<a class='page-link' href='?" . $queryString . "'>" . $page . "</a> ";
                 }
-
+            
                 if ($currentPage < $totalPages) {
-                    echo "<a class='page-link' href='?page=" . ($currentPage + 1) . "'>Next</a>";
+                    $queryParams = $_GET;
+                    $queryParams['page'] = $currentPage + 1;
+                    $queryString = http_build_query($queryParams);
+                    echo "<a class='page-link' href='?" . $queryString . "'>Next</a>";
                 }
+                
                 echo "</div>";           
             } else {
                 echo "<p>No laptops found in the database.</p>";
