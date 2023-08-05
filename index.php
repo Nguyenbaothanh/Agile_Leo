@@ -12,7 +12,7 @@ include_once 'index_process.php'; ?>
 
 <body>
     <header><?php include_once 'header.php'; ?></header>
-    <div class='chuyentrang'><?php include_once 'slide-image.php' ?></div>
+    <main><div class='chuyentrang'><?php include_once 'slide-image.php' ?></div>
     <div class="gallery">
         <?php
         // Định nghĩa số lượng sản phẩm trên mỗi trang
@@ -65,7 +65,8 @@ include_once 'index_process.php'; ?>
             echo "<p>No laptops found in the database.</p>";
         }
         ?>
-    </div>
+    </div></main>
+    
     <footer><?php include_once 'footer.php'; ?></footer>
-</body>~
+</body>
 </html>

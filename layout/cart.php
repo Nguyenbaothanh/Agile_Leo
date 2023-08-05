@@ -36,7 +36,7 @@
             $totalPrice = 0;
             echo "<div class='cart-shopping'>";
 
-            echo "<h2>Giỏ Hàng</h2>";
+            echo "<h2 class='gio-hang'>Giỏ Hàng</h2>";
             echo "<table class='cart-shopping'>";
             echo "<tr><th>Tên Laptop</th><th>Giá tiền</th><th>Số lượng</th><th>Xóa</th></tr>";
             while ($row = $result->fetch_assoc()) {
