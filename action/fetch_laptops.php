@@ -3,16 +3,26 @@ include 'connect.php';
 $brand = $_POST["brand"];
 $processor = $_POST["processor"];
 $ram = $_POST["ram"];
-$sql = "SELECT `id`, `laptop_name`, `price_range`, `image_url` FROM `laptops` WHERE 1";
+$storage_capacity = $_POST["storage_capacity"];
+$sql = "SELECT `id`, `laptop_name`, `price_range`, `image_url`,`storage_capacity` FROM `laptops` WHERE 1";
+$conditions = array();
+
 if (!empty($brand)) {
-    $sql .= " AND `brand` = '$brand'";
+    $conditions[] = "`brand` = '$brand'";
 }
-elseif (!empty($processor)) {
-    $sql .= " AND `processor` = '$processor'";
+if (!empty($processor)) {
+    $conditions[] = "`processor` = '$processor'";
 }
-elseif (!empty($ram)) {
-    $sql .= " AND `ram` = '$ram'";
+if (!empty($ram)) {
+    $conditions[] = "`ram` = '$ram'";
 }
+if (!empty($storage_capacity)) {
+    $conditions[] = "`storage_capacity` = '$storage_capacity'";
+}
+if (!empty($conditions)) {
+    $sql .= " AND " . implode(" AND ", $conditions);
+}
+
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $laptops = array();

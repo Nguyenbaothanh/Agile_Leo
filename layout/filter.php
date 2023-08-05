@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="/css/filter.css">
 </head>
 <body>
-    <header><?php 
-include 'header.php';
-?></header>
-<main><form id="filterForm">
+    <header><?php include 'header.php';?></header>
+    <main><form id="filterForm">
         <label for="brand">Brand:</label>
         <select id="brand" name="brand">
             <option value="">All</option>
@@ -46,6 +44,19 @@ include 'header.php';
             <option value="64GB">64GB</option>
         </select>
         <br>
+        <label for="storage_capacity">Dung lượng ổ cứng:</label>
+        <select id="storage_capacity" name="storage_capacity">
+            <option value="">All</option>
+            <option value="128 GB">128 GB</option>
+            <option value="240 GB">240 GB</option>
+            <option value="256 GB">256 GB</option>
+            <option value="500 GB">500 GB</option>
+            <option value="512 GB">512 GB</option>
+            <option value="1 TB">1 TB</option>
+            <option value="2 TB">2 TB</option>
+            <option value="4 TB">4 TB</option>
+        </select>
+        <br>
         <button type="submit">Filter</button>
     </form>
 
@@ -60,8 +71,8 @@ include 'header.php';
     <footer><?php 
     include 'footer.php';
     ?>
-</footer>
-<script>
+    </footer>
+    <script>
         // Variables to track pagination
         let currentPage = 1;
         const laptopsPerPage = 20;
@@ -84,7 +95,6 @@ include 'header.php';
         function fetchLaptops(filterData) {
             // Convert form data to URLSearchParams
             const formData = new URLSearchParams(filterData);
-            // Make a fetch request to "fetch_laptops.php" with the filter data
             fetch("/action/fetch_laptops.php", {
                 method: "POST",
                 body: formData,
