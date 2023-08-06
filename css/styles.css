@@ -9,13 +9,15 @@
 
 .laptop {
     width: 23%;
-    border: 1px solid #160101;
+    border: hidden;
+    border-radius: 8px;
     /* Reduced width to accommodate the gap */
     height: 380px;
     box-sizing: border-box;
     padding: 10px;
     float: left;
     margin: 1%;
+    box-shadow: 0 1px 4px 0; 
     /* Adding a 1% margin to create space between laptops */
 }
 
@@ -49,9 +51,9 @@
 }
 
 .pagination a.page-link {
-    background-color: #007bff;
+    background-color: #d52220;
     color: #fff;
-    border-color: #007bff;
+    border-color: #f1514f;
 }
 
 

@@ -106,7 +106,7 @@ input[type="number"] {
 /* Style for the submit button */
 
 input[type="submit"] {
-    width: 100%;
+    width: 73.4%;
     padding: 10px;
     background-color: #4CAF50;
     color: #fff;
@@ -197,7 +197,7 @@ input[type="submit"]:hover {
     border: 1px solid #ccc;
     /* Viền input/select */
     border-radius: 5px;
-    color: #050000;
+    color: white;
     /* Bo tròn góc của input/select */
     background-color: #ffffff;
     /* Màu nền của input/select */
@@ -211,7 +211,7 @@ input[type="submit"]:hover {
 /* CSS cho thẻ textarea bên trong phần tử có lớp comment-form */
 
 .comment-form input[type="submit"] {
-    background-color: #97FFFF;
+    background-color: #4CAF50;
 }
 
 .comment-form textarea {
