@@ -6,9 +6,13 @@
     <title>Danh sách đơn hàng</title>
     <style>
         /* CSS styles for the table */
+        h1 {
+            padding-left:30px;
+        }
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 80%;
+            margin:30px;
         }
         th, td {
             border: 1px solid black;
@@ -16,7 +20,10 @@
             text-align: center;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #343a40;
+            color:white;
+            text-align: center;
+            padding: 10px;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
