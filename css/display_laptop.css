@@ -22,21 +22,24 @@ ul {
 .vertical.navigation h2 {
     margin-bottom: 20px;
 }
+
 .vertical.navigation ul {
     list-style: none;
     padding: 0px;
 }
+
 .vertical.navigation a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: white;
-    background-color:#343a40 ;
+    background-color: #343a40;
 }
 
 .vertical.navigation a:hover {
     background-color: #494e53;
 }
+
 
 /* Style the content */
 
@@ -45,6 +48,7 @@ ul {
     padding: 20px;
     box-sizing: border-box;
 }
+
 
 /* Style the table */
 
@@ -64,9 +68,10 @@ td {
 
 th {
     background-color: #343a40;
-    color : white;
-    text-align: left;
+    color: white;
+    text-align: center;
 }
+
 
 /* Style the add button */
 
@@ -89,4 +94,10 @@ th {
 
 .hidden {
     display: none;
+}
+
+.link-edit,
+.link-delete {
+    text-decoration: none;
+    color: rgb(5, 42, 250);
 }

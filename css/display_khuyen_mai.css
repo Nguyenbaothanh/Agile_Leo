@@ -61,7 +61,7 @@ td {
 
 th {
     background-color: #343a40;
-    color:white;
+    color: white;
 }
 
 tr:nth-child(even) {
@@ -75,7 +75,7 @@ tr:hover {
 .add_km {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -84,5 +84,11 @@ tr:hover {
 }
 
 .add_km:hover {
-    background-color: #0056b3;
+    background-color: #4CAF50;
+}
+
+.link-edit,
+.link-delete {
+    text-decoration: none;
+    color: rgb(5, 42, 250);
 }

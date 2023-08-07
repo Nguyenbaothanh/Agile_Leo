@@ -47,8 +47,8 @@
                     <td>".$row['email']."</td>
                     <td>".$row['address']."</td>
                     <td>
-                    <a href='edit_user.php?id=".$row['user_id']."' onclick='openModal1()'>Sửa</a> |
-                    <a href='/action/delete_user.php?id=".$row['user_id']."'>Xóa</a>
+                    <a class='link-edit' href='edit_user.php?id=".$row['user_id']."' onclick='openModal1()'>Sửa</a> |
+                    <a class='link-delete' href='/action/delete_user.php?id=".$row['user_id']."'>Xóa</a>
                     </td>
                 </tr>";
         }

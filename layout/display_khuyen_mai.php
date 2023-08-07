@@ -51,8 +51,8 @@ $result = $conn->query($sql);
                 echo "<td>" . $row["ngay_bat_dau"] . "</td>";
                 echo "<td>" . $row["ngay_het_han"] . "</td>";
                 echo "<td>" . $row["so_tien_khuyen_mai"] . "</td>";
-                echo '<td><a href="edit_ma_khuyen_mai.php?id=' . $row["id_ma_khuyen_mai"] . '">Edit</a></td>';
-                echo '<td><a href="/action/delete_ma_khuyen_mai.php?id=' . $row["id_ma_khuyen_mai"] . '">Delete</a></td>';
+                echo '<td><a class="link-edit" href="edit_ma_khuyen_mai.php?id=' . $row["id_ma_khuyen_mai"] . '">Edit</a></td>';
+                echo '<td><a class="link-delete" href="/action/delete_ma_khuyen_mai.php?id=' . $row["id_ma_khuyen_mai"] . '">Delete</a></td>';
                 echo "</tr>";
             }
         } else {

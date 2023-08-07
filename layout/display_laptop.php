@@ -45,7 +45,7 @@
                         <th>Tình trạng</th>
                         <th>Khoảng giá</th>
                         <th>URL hình ảnh</th>
-                        <th></th>
+                        <th>Thao tác</th>
                     </tr>";
 
             while ($row = $result->fetch_assoc()) {
@@ -64,8 +64,8 @@
                         <td>".$row["price_range"]."</td>
                         <td>".$row["image_url"]."</td>
                         <td>
-                            <a href='/action/delete_laptop.php?delete_id=".$row["id"]."'>Xóa</a> |
-                            <a href='update_laptop.php?id=".$row["id"]."'>Sửa</a></td>
+                            <a class='link-edit' href='/action/delete_laptop.php?delete_id=".$row["id"]."'>Xóa</a> |
+                            <a class='link-delete' href='update_laptop.php?id=".$row["id"]."'>Sửa</a></td>
                       </tr>";
             }
 

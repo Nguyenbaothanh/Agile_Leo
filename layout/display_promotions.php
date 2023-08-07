@@ -46,7 +46,7 @@
                 echo "<td><img src='/action/" . $row['image_path'] . "' height='100' width='100'></td>";
                 echo "<td>" . $row['start_date'] . "</td>";
                 echo "<td>" . $row['end_date'] . "</td>";
-                echo "<td><a href='edit_promotions.php?id=" . $row['id_promotions'] . "'>Sửa</a> | <a href='/action/delete_promotions.php?id=" . $row['id_promotions'] . "'>Xóa</a></td>";
+                echo "<td><a class='link-edit' href='edit_promotions.php?id=" . $row['id_promotions'] . "'>Sửa</a> | <a class='link-delete' href='/action/delete_promotions.php?id=" . $row['id_promotions'] . "'>Xóa</a></td>";
                 echo "</tr>";
             }
         } else {
