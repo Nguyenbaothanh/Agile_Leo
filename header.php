@@ -38,7 +38,7 @@
         <div class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tên người dùng <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/layout/profile.php">Thông tin người dùng</a></li>       
+            <li><a  href="/layout/profile.php">Thông tin người dùng</a></li>       
             <?php if ($_SESSION['type'] === 'user') : ?>
               <li><a href="/layout/cart.php">Giỏ hàng</a></li>
               <li><a href="/layout/order-user.php">Đơn hàng đã đặt</a></li>

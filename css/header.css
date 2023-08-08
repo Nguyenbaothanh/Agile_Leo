@@ -200,3 +200,14 @@ a {
     font-size: 16PX;
     font-weight: bold;
 }
+
+.dropdown-toggle {
+    background-color: #d52220;
+    color: #f7f7f7;
+    border: 2px solid #960404;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 16PX;
+    font-weight: bold;
+    padding: 6px;
+}
