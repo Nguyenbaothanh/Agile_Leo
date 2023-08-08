@@ -66,14 +66,14 @@
   <!-- Modal for login -->
   <div id="modal-login" class="modal">
     <div class="modal-content">
-      <?php include 'layout/login.php'; ?>
+      <?php include 'login.php'; ?>
     </div>
   </div>
 
   <!-- Modal for register -->
   <div id="modal-register" class="modal">
     <div class="modal-content">
-      <?php include 'layout/register.php'; ?>
+      <?php include 'register.php'; ?>
     </div>
   </div>
 

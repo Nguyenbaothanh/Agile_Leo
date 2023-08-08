@@ -27,9 +27,9 @@
                     <option value="Lenovo">Lenovo</option>
                     <option value="LG">LG</option>
                     <option value="MSI">MSI</option>
-                    <option value="LG">Macbook</option>
-                    <option value="MSI">Samsung</option>
-                    <option value="MSI">Huawei</option>
+                    <option value="Macbook">Macbook</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Huawei">Huawei</option>
                 </select><br>
 
                 <label for="processor">Processor:</label>
