@@ -63,7 +63,7 @@ if ($result->num_rows > 0) {
     }
     echo "</div>";
 } else {
-    echo "Không có chương trình khuyến mãi nào.";
+    echo "Hiện tại không có chương trình khuyến mãi nào.";
 }
 
 // Đóng kết nối cơ sở dữ liệu
