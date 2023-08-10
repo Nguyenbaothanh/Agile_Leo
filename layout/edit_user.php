@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
     <title>Sửa người dùng</title>
     <link rel="stylesheet" href="/css/edit_user.css">
