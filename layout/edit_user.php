@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Sửa người dùng</title>
+    <title>Sửa thông tin người dùng</title>
     <link rel="stylesheet" href="/css/edit_user.css">
 </head>
 <body>
@@ -28,8 +28,7 @@
                 <br>
                 <label for="password">Mật khẩu:</label>
                 <input type="password" id="password" name="password" value="<?php echo $row['password']; ?>">
-                <input type="checkbox" onclick="togglePassword()"> Show password
-
+                <input type="checkbox" onclick="togglePassword()"> Hiện mật khẩu
                 <br>
                 <label for="full_name">Họ & tên:</label>
                 <input type="text" id="full_name" name="full_name" value="<?php echo $row['full_name']; ?>">
