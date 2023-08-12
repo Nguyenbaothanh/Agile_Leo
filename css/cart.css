@@ -19,7 +19,8 @@ table td {
 }
 
 table th {
-    background-color: #f2f2f2;
+    background-color: #343a40;
+    color:white;
 }
 
 table tr:nth-child(even) {
@@ -204,4 +205,11 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+p {
+    padding-left: 30px;
+}
+img {
+    border-radius: 50px;
 }

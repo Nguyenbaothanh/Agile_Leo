@@ -1,3 +1,4 @@
+<!-- Cập nhật file -->
 <?php
 // Kết nối tới cơ sở dữ liệu (thay đổi thông tin kết nối cho phù hợp)
 // Replace these variables with your actual MySQL credentials

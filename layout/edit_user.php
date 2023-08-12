@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sửa người dùng</title>
     <link rel="stylesheet" href="/css/edit_user.css">
@@ -30,7 +31,7 @@
                 <input type="checkbox" onclick="togglePassword()"> Show password
 
                 <br>
-                <label for="full_name">Họ và tên:</label>
+                <label for="full_name">Họ & tên:</label>
                 <input type="text" id="full_name" name="full_name" value="<?php echo $row['full_name']; ?>">
                 <br>
                 <label for="sex">Giới tính:</label>

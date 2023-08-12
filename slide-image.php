@@ -5,9 +5,10 @@
 <link rel="stylesheet" href="/css/slide_image.css">
 </head>
 <body>
+    <!-- form danh muc tim kiem -->
     <div id="mainnav">
         <ul>
-            <li class="thefirst"><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Laptop MỚI CHÍNH HÃNG</a>
+            <li class="thefirst"><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">LAPTOP MỚI CHÍNH HÃNG</a>
                 <ul class="sub-menu">
                     <li><a  href="/layout/laptop.php?brand=asus">Asus</a>
                         <ul class="sub-menu2">
