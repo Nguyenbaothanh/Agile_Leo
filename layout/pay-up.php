@@ -124,9 +124,6 @@ if (isset($_SESSION['user_id'])) {
 ?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// JavaScript (script.js)
-
-// Function to update the total amount when a promotion code is selected
 function updateTotalAmount() {
     var selectedPromotionID = $('#promotion_code').val();
     var selectedPromotion = promotionCodes.find(code => code.id == selectedPromotionID);
