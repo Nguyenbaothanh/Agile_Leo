@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php
+require_once 'Edit_UserModel.php';
+require_once 'connect.php';
 
+<<<<<<< HEAD
+class EditUserController {
+    private $model;
+=======
 <head>
     <title>Sửa thông tin người dùng</title>
     <link rel="stylesheet" href="/css/edit_user.css">
@@ -9,14 +14,19 @@
     <?php
     // Kết nối đến cơ sở dữ liệu (giữ nguyên đoạn kết nối đã sử dụng ở trang display_users.php)
     include_once 'connect.php';
+>>>>>>> 44f76069f87e398a858022fcbdf1148d246a4556
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
-        $user_id = $_GET["id"];
+    public function __construct($conn) {
+        $this->model = new UserModel($conn);
+    }
 
-        // Lấy thông tin người dùng từ cơ sở dữ liệu dựa trên ID
-        $sql = "SELECT * FROM users WHERE user_id = $user_id";
-        $result = $conn->query($sql);
+    public function editUser($user_id) {
+        $user = $this->model->getUserById($user_id);
 
+<<<<<<< HEAD
+        if ($user) {
+            require 'edit_user_view.php';
+=======
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();?>
             <h1>Sửa người dùng</h1>
@@ -51,16 +61,23 @@
             <br>
             <a href="/layout/display_users.php">Quay lại danh sách người dùng</a>
     <?php
+>>>>>>> 44f76069f87e398a858022fcbdf1148d246a4556
         } else {
             echo "Không tìm thấy người dùng.";
         }
-    } else {
-        echo "Invalid request.";
     }
+}
 
-    $conn->close();
-    ?>
-    <script src="/js/show-password.js"></script>
-</body>
 
-</html>
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
+    $user_id = $_GET["id"];
+
+    $controller = new EditUserController($conn);
+    $controller->editUser($user_id);
+} else {
+    echo "Invalid request.";
+}
+
+$conn->close();
+?>

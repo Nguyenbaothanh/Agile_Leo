@@ -1,31 +1,35 @@
-<?php include 'select-sql/edit_ma_khuyen_mai.php'; ?>
+<?php
+require_once 'MaKhuyenMaiModel.php';
+include_once 'connect.php';
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Chỉnh sửa mã khuyến mãi</title>
-    <link rel="stylesheet" type="text/css" href="/css/add_khuyen_mai.css">
-</head>
-<body>
-        <h2>Chỉnh sửa mã khuyến mãi</h2>
-        <form action="/action/edit_ma_khuyen_mai.php" method="post">
-            <input type="hidden" name="id_ma_khuyen_mai" value="<?php echo $id_ma_khuyen_mai; ?>">
-            <label for="ten_khuyen_mai">Tên khuyến mãi :</label>
-            <input type="text" name="ten_khuyen_mai" value="<?php echo $ten_khuyen_mai; ?>" required><br>
-            <label for="so_tien_toi_thieu">Số tiền tối thiểu:</label>
-            <input type="number" name="so_tien_toi_thieu" step="1000" value="<?php echo $so_tien_toi_thieu; ?>" required><br>
+class EditMaKhuyenMaiController {
+    private $model;
 
-            <label for="ngay_bat_dau">Ngày bắt đầu:</label>
-            <input type="date" name="ngay_bat_dau" value="<?php echo $ngay_bat_dau; ?>" required><br>
+    public function __construct($conn) {
+        $this->model = new MaKhuyenMaiModel($conn);
+    }
 
-            <label for="ngay_het_han">Ngày hết hạn:</label>
-            <input type="date" name="ngay_het_han" value="<?php echo $ngay_het_han; ?>" required><br>
+    public function editMaKhuyenMai($id) {
+        $maKhuyenMai = $this->model->getMaKhuyenMaiById($id);
 
-            <label for="so_tien_khuyen_mai">Số tiền khuyến mãi:</label>
-            <input type="number" name="so_tien_khuyen_mai" step="1000" value="<?php echo $so_tien_khuyen_mai; ?>" required><br>
+        if ($maKhuyenMai) {
+            require 'edit_ma_khuyen_mai_view.php';
+        } else {
+            echo "Không tìm thấy mã khuyến mãi.";
+        }
+    }
+}
 
-            <input type="submit" value="Lưu">
-        </form>
-    </div>
-</body>
-</html>
+
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
+    $id = $_GET["id"];
+
+    $controller = new EditMaKhuyenMaiController($conn);
+    $controller->editMaKhuyenMai($id);
+} else {
+    echo "Invalid request.";
+}
+
+$conn->close();
+?>
