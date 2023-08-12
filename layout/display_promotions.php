@@ -18,7 +18,7 @@
     </nav>
     <h1>Danh sách chương trình khuyến mãi</h1>
 
-<a class="add_promotions" href="add_promotions.php">Thêm chương trình khuyến mãi</a>
+<a class="add_promotions" href="add_promotions.php">Thêm chương trình khuyến mãi mới</a>
 
     <table border="1">
         <tr>
