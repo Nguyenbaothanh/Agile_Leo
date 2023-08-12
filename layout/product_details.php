@@ -66,7 +66,7 @@
                     </div>
                     <div class="break-down">
                         <div class="star-rating">
-                            <span>5 sao : </span>
+                            <span class="star-rating">5 sao : </span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -75,7 +75,7 @@
                             <h1 class="number-rating"><?php echo $ratings_5; ?></h1>
                         </div>
                         <div class="star-rating">
-                            <span>4 sao : </span>
+                            <span class="star-rating">4 sao : </span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -84,7 +84,7 @@
                             <h1 class="number-rating"><?php echo $ratings_4; ?></h1>
                         </div>
                         <div class="star-rating">
-                            <span>3 sao : </span>
+                            <span class="star-rating">3 sao : </span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -93,7 +93,7 @@
                             <h1 class="number-rating"><?php echo $ratings_3; ?></h1>
                         </div>
                         <div class="star-rating">
-                            <span>2 sao : </span>
+                            <span class="star-rating">2 sao : </span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
@@ -102,7 +102,7 @@
                             <h1 class="number-rating"><?php echo $ratings_2; ?></h1>
                         </div>
                         <div class="star-rating">
-                            <span>1 sao : </span>
+                            <span >1 sao : </span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
@@ -120,13 +120,13 @@
                         <?php if (!empty($_SESSION['username'])) : ?>
                             <p><strong>Username:</strong> <?php echo $_SESSION['username']; ?></p>
                         <?php endif; ?>
-                        <label for="rating">Rating:</label>
-                        <select name="rating" id="rating">
-                            <option value="5">5 Stars</option>
-                            <option value="4">4 Stars</option>
-                            <option value="3">3 Stars</option>
-                            <option value="2">2 Stars</option>
-                            <option value="1">1 Star</option>
+                        <label class="star-rating" for="rating">Rating:</label>
+                        <select  name="rating" id="rating">
+                            <option class="star-rating" value="5">5 Stars</option>
+                            <option class="star-rating"value="4">4 Stars</option>
+                            <option class="star-rating"value="3">3 Stars</option>
+                            <option class="star-rating" value="2">2 Stars</option>
+                            <option class="star-rating" value="1">1 Star</option>
                         </select>
                         <br>
                         <label for="comment">Your Comment:</label>

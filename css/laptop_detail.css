@@ -402,6 +402,7 @@ input[type="submit"]:hover {
     margin: 5px 0;
     font-size: x-large;
     display: flex;
+    color: #000;
     /* Add flex display to align stars and number horizontally */
     align-items: center;
     /* Align items (stars and number) vertically */
@@ -452,4 +453,8 @@ input[type="submit"]:hover {
 
 .star-rating .fa-star {
     vertical-align: middle;
+}
+
+#rating {
+    color: #000;
 }
