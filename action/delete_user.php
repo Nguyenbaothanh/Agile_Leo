@@ -1,3 +1,4 @@
+<!-- Cập nhật file -->
 <?php
 include_once 'connect.php';
 
