@@ -1,3 +1,4 @@
+<!-- Cập nhật file -->
 <?php
 // Kết nối đến cơ sở dữ liệu (giữ nguyên đoạn kết nối đã sử dụng ở trang display_users.php)
 include_once 'connect.php';
