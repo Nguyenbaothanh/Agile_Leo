@@ -16,6 +16,7 @@ while ($row = $result->fetch_assoc()) {
     $productsArray[] = $row;
 }
 include_once 'ProductController.php';
+define('SERVER_PATH', 'action/');
 
 
 ?>

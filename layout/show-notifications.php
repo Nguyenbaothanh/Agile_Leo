@@ -15,7 +15,7 @@
                 <a href='promotion_details.php?id=<?= $promotion['id_promotions'] ?>'>
                     <div class="notification-content">
                         <div class="image-container">
-                            <img src='/action/<?= $promotion['image_path'] ?>' alt='<?= $promotion['title'] ?>' style='max-width: 200px;'>
+                        <img src='<?= SERVER_PATH . $promotion['image_path'] ?>' alt='<?= $promotion['title'] ?>' style='max-width: 200px;'>
                         </div>
                         <div class="notification-details">
                             <h1 class='title'>Tiêu đề: <?= $promotion['title'] ?></h1>

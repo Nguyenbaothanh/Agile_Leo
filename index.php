@@ -27,7 +27,7 @@
                     echo "<a href='/layout/product_details.php?id=" . $row['id'] . "'>"; // Link to product details page
                     // Hiển thị thông tin ảnh sản phẩm
                     if (!empty($row['image_url'])) {
-                        echo "<img src='action/" . $row['image_url'] . "' alt='Laptop Image'>";
+                        echo "<img src='" . SERVER_PATH . $row['image_url'] . "' alt='Laptop Image'>";
                     } else {
                         echo "<img src='img/laptop.png' alt='Default Image'>";
                     }

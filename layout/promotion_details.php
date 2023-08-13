@@ -15,7 +15,7 @@
         <div class="date-range-start">Từ ngày <?php echo $start_date; ?></div>
         <div class="date-range-end">Đến ngày <?php echo $end_date; ?></div>
         </div>
-        <img src="/action/<?php echo $image_path; ?>" alt="<?php echo $title; ?>">
+        <img src="<?php echo SERVER_PATH . $image_path; ?>" alt="<?php echo $title; ?>">
         <p class="content"><?php echo $content; ?></p>
     </div>
     </main>
