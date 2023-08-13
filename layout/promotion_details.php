@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="/css/detail-promotions.css">
 </head>
 <body>
-    <header><?php include'header.php'; ?></header>
+    <header><?php include 'header.php'; ?></header>
     <main>
     <?php include 'select-sql/promotion_details.php'; ?>
     <div class="promotion-detail">

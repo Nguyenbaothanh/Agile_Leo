@@ -9,13 +9,13 @@
 </head>
 <body>
     <header><?php include 'header.php'; ?></header>
-    <div class="promotion-list">
+    <main><div class="promotion-list">
         <?php foreach ($promotions as $promotion): ?>
             <div class='show-notification'>
-                <a href='promotion_details.php?id=<?= $promotion['id_promotions'] ?>'>
+                <a href='/layout/promotion_details.php?id=<?= $promotion['id_promotions'] ?>'>
                     <div class="notification-content">
                         <div class="image-container">
-                        <img src='<?=  $promotion['image_path'] ?>' alt='<?= $promotion['title'] ?>' style='max-width: 200px;'>
+                        <img src='<?= SERVER_PATH .   $promotion['image_path'] ?>' alt='<?= $promotion['title'] ?>' style='max-width: 200px;'>
                         </div>
                         <div class="notification-details">
                             <h1 class='title'>Tiêu đề: <?= $promotion['title'] ?></h1>
@@ -35,7 +35,8 @@
                 <a href='?page=<?= $i ?>'><?= $i ?></a>
             <?php endif; ?>
         <?php endfor; ?>
-    </div>
+    </div></main>
+    
     <footer><?php include 'footer.php'; ?></footer>
 </body>
 </html>

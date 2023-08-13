@@ -1,6 +1,6 @@
 <?php
 // Kết nối tới cơ sở dữ liệu, thay đổi thông tin kết nối phù hợp với cấu hình của bạn
-include 'connect.php';
+include_once 'connect.php';
 
 if (isset($_GET['id'])) {
     $id_ma_khuyen_mai = $_GET['id'];

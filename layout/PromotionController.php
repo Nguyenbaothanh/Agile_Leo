@@ -29,12 +29,7 @@ class PromotionController {
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
 // Tạo kết nối đến CSDL
-$conn = new mysqli("localhost", "root", "", "agile");
 
-// Kiểm tra kết nối CSDL
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 $controller = new PromotionController($conn);
 $controller->index($page);
