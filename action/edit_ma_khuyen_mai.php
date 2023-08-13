@@ -21,7 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             WHERE id_ma_khuyen_mai = $id_ma_khuyen_mai";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Cập nhật mã khuyến mãi thành công.";
+        echo "<script>alert('Đã sửa khuyến mãi thành công');</script>";
+        echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
     } else {
         echo "Lỗi: " . $conn->error;
     }

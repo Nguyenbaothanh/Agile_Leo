@@ -9,8 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $sql = "DELETE FROM users WHERE user_id = $user_id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: /layout/display_users.php");
+        echo "<script>alert('Đã xóa người dùng thành công');</script>";
+        echo "<script>window.location = '/layout/display_users.php';</script>";
     } else {
+        echo "<script>alert('Đã xóa người dùng thất bại');</script>";
+        echo "<script>window.location = '/layout/display_users.php';</script>";
         echo "Lỗi: " . $sql . "<br>" . $conn->error;
     }
 }

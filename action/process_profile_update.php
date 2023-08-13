@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Execute the update
     if ($stmt->execute()) {
-        // Update successful, redirect the user back to the profile page
-        header("Location: /layout/profile.php");
+        echo "<script>alert('Đã sửa người dùng thành công');</script>";
+        echo "<script>window.location = '/layout/profile.php'; </script>";
         exit();
     } else {
         // Update failed, redirect with an error message

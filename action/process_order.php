@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $is_cart_items_deleted = $stmt_delete_cart_items->execute();
 
             if ($is_cart_items_deleted) {
-                // Redirect to a thank-you page or any other appropriate page after successful order placement
+                echo "<script>alert('Đã đặt hàng thành công');</script>";
                 echo "<script>window.location = '/layout/cart.php'; </script>";
                 exit;
             } else {

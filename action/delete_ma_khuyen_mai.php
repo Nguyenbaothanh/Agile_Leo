@@ -7,13 +7,15 @@ if (isset($_GET["id"])) {
     $sql = "DELETE FROM ma_khuyen_mai WHERE id_ma_khuyen_mai=$id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../layout/display_khuyen_mai.php");
+        echo "<script>alert('Đã xóa khuyến mãi thành công');</script>";
+        echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
         exit();
     } else {
         echo "Lỗi: " . $sql . "<br>" . $conn->error;
     }
 } else {
-    echo "Lỗi: Không tìm thấy ID mã khuyến mãi.";
+    echo "<script>alert('Lỗi: Không tìm thấy ID mã khuyến mãi.');</script>";
+    echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
 }
 
 // Đóng kết nối

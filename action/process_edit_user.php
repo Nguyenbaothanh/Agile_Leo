@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE users SET username = '$username', full_name = '$full_name', sex = '$sex', email = '$email', address = '$address' WHERE user_id = $user_id";
 
     if ($conn->query($sql) === TRUE) {
+        echo "<script>window.location = '/layout/display_users.php';</script>";
         header("Location: /layout/display_users.php");
     } else {
         echo "Lỗi: " . $sql . "<br>" . $conn->error;

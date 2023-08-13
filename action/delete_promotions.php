@@ -9,7 +9,8 @@ $id = $_GET['id'];
 $sql = "DELETE FROM promotions WHERE id_promotions = '$id'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Xóa chương trình khuyến mãi thành công!";
+    echo "<script>alert('Xóa chương trình khuyến mãi thành công');</script>";
+    echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
 } else {
     echo "Lỗi: " . $sql . "<br>" . $conn->error;
 }

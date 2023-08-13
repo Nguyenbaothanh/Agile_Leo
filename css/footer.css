@@ -16,7 +16,6 @@ main {
     /* Fill the remaining vertical space */
 }
 
-/*cap nhat footer*/
 footer {
     background-color: #27343e;
     flex-shrink: 0;
