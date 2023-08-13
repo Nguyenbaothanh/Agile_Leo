@@ -9,7 +9,7 @@
 <body>
     <?php include_once 'admin_dashboard.php'; ?>
     <div class="content"><h2>Danh sách mã khuyến mãi</h2>
-    <a class="add_km" href="add_khuyen_mai.php">Thêm khuyến mãi</a>
+    <a class="add_km" href="view/add_khuyen_mai.php">Thêm khuyến mãi</a>
     <table>
         <tr>
             <th>ID</th>

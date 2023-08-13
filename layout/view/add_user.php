@@ -33,7 +33,7 @@
         <input type="submit" value="Đăng ký">
     </form>
     <br>
-    <a href="display_users.php">x</a>
+    <a href="/layout/display_users_controller.php">x</a>
 
 </body>
 </html>

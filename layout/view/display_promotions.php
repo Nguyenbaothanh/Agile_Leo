@@ -5,12 +5,9 @@
     <link rel="stylesheet" href="/css/display_promotions.css">
 </head>
 <body>
-<?php include_once 'admin_dashboard.php'; ?>
-
+    <?php include_once 'admin_dashboard.php'; ?>
     <h1>Danh sách chương trình khuyến mãi</h1>
-
-<a class="add_promotions" href="add_promotions.php">Thêm chương trình khuyến mãi mới</a>
-
+    <a class="add_promotions" href="view/add_promotions.php">Thêm chương trình khuyến mãi mới</a>
     <table border="1">
         <tr>
             <th>Tiêu đề</th>
@@ -22,10 +19,6 @@
         </tr>
         <?php
         // Kết nối đến cơ sở dữ liệu MySQL
-        include 'connect.php';
-        // Truy vấn dữ liệu từ bảng promotions
-        $sql = "SELECT * FROM promotions";
-        $result = $conn->query($sql);
 
         // Hiển thị dữ liệu trong bảng
         if ($result->num_rows > 0) {

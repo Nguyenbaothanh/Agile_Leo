@@ -12,18 +12,14 @@ class EditUserController {
         $user = $this->model->getUserById($user_id);
 
         if ($user) {
-            require 'edit_user_view.php';
+            require 'view/edit_user_view.php';
         } else {
             echo "Không tìm thấy người dùng.";
         }
     }
 }
 
-$conn = new mysqli("localhost", "root", "", "agile");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $user_id = $_GET["id"];

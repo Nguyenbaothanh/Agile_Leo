@@ -1,4 +1,6 @@
 <?php
+define('SERVER_PATH', '/action/');
+
 // Replace these variables with your actual MySQL credentials
 $hostname = "localhost";  // MySQL server hostname (usually "localhost")
 $username = "root";  // MySQL username
@@ -12,6 +14,6 @@ $conn = new mysqli($hostname, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-define('SERVER_PATH', '/action/');
-
+$sqldisplay_user = "SELECT * FROM users WHERE type = 'user'";
+$resultdisplay_user = $conn->query($sqldisplay_user);
 ?>

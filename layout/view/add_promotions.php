@@ -21,7 +21,7 @@
       <label for="end_date">Ngày kết thúc:</label>
       <input type="date" id="end_date" name="end_date" required>
       <button type="submit">Thêm chương trình</button>
-      <a class="back-notificaions" href="display_promotions.php">Quay về trang tạo chương trình khuyến mãi</a>
+      <a class="back-notificaions" href="/layout/display_promotions_controller.php">Quay về trang tạo chương trình khuyến mãi</a>
     </form>
   </div>
 </body>

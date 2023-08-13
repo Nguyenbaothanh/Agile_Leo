@@ -8,14 +8,14 @@ if (isset($_GET["id"])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Đã xóa khuyến mãi thành công');</script>";
-        echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
+        echo "<script>window.location = '/layout/display_khuyen_mai_controller.php';</script>";
         exit();
     } else {
         echo "Lỗi: " . $sql . "<br>" . $conn->error;
     }
 } else {
     echo "<script>alert('Lỗi: Không tìm thấy ID mã khuyến mãi.');</script>";
-    echo "<script>window.location = '/layout/display_khuyen_mai.php';</script>";
+    echo "<script>window.location = '/layout/display_khuyen_mai_controller.php';</script>";
 }
 
 // Đóng kết nối

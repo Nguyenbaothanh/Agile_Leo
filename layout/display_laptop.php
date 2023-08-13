@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/display_laptop.css">
 </head>
 <body> 
-<?php include_once 'admin_dashboard.php'; ?>
+    <?php include_once 'view/admin_dashboard.php'; ?>
     <div class="content">
 
         <?php
@@ -15,7 +15,7 @@
         $sql = "SELECT `id`,`laptop_name`,`brand`,`processor`,`screen_size`,`graphics_card`,`ram`,`storage_capacity`,`operating_system`,`weight`,`status`,`price_range`,`image_url` FROM `laptops` WHERE 1";
         $result = $conn->query($sql);
         echo "<h1>Danh sách sản phẩm</h1>";
-        include 'add_laptop.php';
+        include 'view/add_laptop.php';
         if ($result->num_rows > 0) {
 
             echo "<table border='1'>

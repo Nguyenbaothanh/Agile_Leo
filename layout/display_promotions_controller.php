@@ -3,8 +3,8 @@
 
 include 'connect.php';
 
-$sql = "SELECT * FROM ma_khuyen_mai";
+$sql = "SELECT * FROM promotions";
 $result = $conn->query($sql);
 
-include 'view/display_khuyen_mai.php';
+include 'view/display_promotions.php';
 ?>

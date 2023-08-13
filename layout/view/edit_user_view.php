@@ -35,7 +35,7 @@
         <input type="submit" value="Lưu">
     </form>
     <br>
-    <a href="/layout/display_users.php">Quay lại danh sách người dùng</a>
+    <a href="/layout/display_users_controller.php">Quay lại danh sách người dùng</a>
     <script src="/js/show-password.js"></script>
 </body>
 

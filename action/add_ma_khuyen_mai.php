@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Thực hiện kiểm tra ngày hết hạn phải lớn hơn ngày bắt đầu
     if ($ngay_het_han <= $ngay_bat_dau) {
-        echo "<script>alert('Ngày hết hạn phải lớn hơn ngày bắt đầu.'); window.location = '/layout/add_khuyen_mai.php';</script>";
+        echo "<script>alert('Ngày hết hạn phải lớn hơn ngày bắt đầu.'); window.location = '/layout/display_khuyen_mai_controller.php';</script>";
     } else {
         // Thực hiện truy vấn để chèn dữ liệu vào cơ sở dữ liệu
         $sql = "INSERT INTO ma_khuyen_mai (ten_khuyen_mai, so_tien_toi_thieu, ngay_bat_dau, ngay_het_han, so_tien_khuyen_mai)
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             echo "Thêm mã khuyến mãi thành công!";
-            echo "<script> window.location = '/layout/add_khuyen_mai.php';</script>";
+            echo "<script> window.location = '/layout/display_khuyen_mai_controller.php';</script>";
         } else {
             echo "Lỗi: " . $sql . "<br>" . $conn->error;
         }

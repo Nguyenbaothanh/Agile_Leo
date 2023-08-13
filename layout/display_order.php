@@ -9,7 +9,7 @@ class OrderController {
 
     public function displayOrders() {
         $orders = $this->model->getOrders();
-        require 'display_order_view.php';
+        require 'view/display_order_view.php';
     }
 
     public function updateOrderStatus($action, $orderId) {

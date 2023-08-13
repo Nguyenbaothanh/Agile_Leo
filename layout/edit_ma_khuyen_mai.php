@@ -13,7 +13,7 @@ class EditMaKhuyenMaiController {
         $maKhuyenMai = $this->model->getMaKhuyenMaiById($id);
 
         if ($maKhuyenMai) {
-            require 'edit_ma_khuyen_mai_view.php';
+            require 'view/edit_ma_khuyen_mai_view.php';
         } else {
             echo "Không tìm thấy mã khuyến mãi.";
         }

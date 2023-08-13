@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])) {
         <li><a href="/layout/order-user.php">Đơn hàng đã đặt</a></li>
       <?php endif; ?>
       <?php if ($_SESSION['type'] === 'admin') : ?>
-        <li><a href="/layout/admin_dashboard.php">Dashboard Admin</a></li>
+        <li><a href="/layout/view/admin_dashboard.php">Dashboard Admin</a></li>
         <li><a href="/layout/cart.php">Giỏ hàng</a></li>
         <li><a href="/layout/order-user.php">Đơn hàng đã đặt</a></li>
       <?php endif; ?>

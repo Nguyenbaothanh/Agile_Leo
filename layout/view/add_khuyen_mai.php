@@ -24,7 +24,7 @@
             <input type="number" name="so_tien_khuyen_mai" step="1000" required><br>
 
             <input type="submit" value="Thêm">
-            <a class="back_display_km" href="display_khuyen_mai.php">Quay về trang quản lí mã khuyến mãi</a>
+            <a class="back_display_km" href="/layout/display_khuyen_mai_controller.php">Quay về trang quản lí mã khuyến mãi</a>
         </form>
     </div>
 </body>

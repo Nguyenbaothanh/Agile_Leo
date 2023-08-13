@@ -12,7 +12,7 @@ class EditPromotionsController {
         $promotion = $this->model->getPromotionById($id);
 
         if ($promotion) {
-            require 'edit_promotions_view.php';
+            require 'view/edit_promotions_view.php';
         } else {
             echo "Không tìm thấy chương trình khuyến mãi có ID = $id";
         }
