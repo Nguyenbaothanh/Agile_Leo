@@ -14,21 +14,27 @@
     <?php
     // product_details.php
     include 'connect.php';
-
     // Function to sanitize input (to prevent SQL injection)
     function sanitize_input($input) {
         return intval($input);
     }
-
     // Check if the 'id' parameter exists in the URL
     if (isset($_GET['id'])) {
         // Lấy Thông tin của laptop đó dựa trên id mà laptop mà đã bấm
-        include 'select-sql/laptop-detail-info.php';
-        // Check if a laptop with the given id exists in the database
+
+        $laptop_id = sanitize_input($_GET['id']);
+        
+        // Perform the SQL query to fetch laptop details with the given id
+        $sql = "SELECT `id`, `laptop_name`, `brand`, `processor`, `screen_size`, `graphics_card`, `ram`, `storage_capacity`, `operating_system`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `id` = $laptop_id";
+        
+        // Execute the query and fetch the laptop details
+        $result = $conn->query($sql);
         if ($result && $result->num_rows > 0) {
             $row = $result->fetch_assoc();
             ?>
-            <div class="product-details">
+            
+            <?php if (isset($_SESSION['user_id'])) : ?>
+                <div class="product-details">
                 <div class="product-image">
                     <img src="/action/<?php echo $row['image_url']; ?>" alt="<?php echo $row['laptop_name']; ?> Image">
                 </div>
@@ -48,17 +54,51 @@
                     </form>
                 </div>
             </div>
-            <?php if (isset($_SESSION['user_id'])) : ?>
                 <div class="add-to-cart-form">
                     <form action="/action/add_to_cart.php" method="post">
                         <input type="hidden" name="laptop_id" value="<?php echo $row['id']; ?>">
                         <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
-                        <label for="quantity">Số lượng:</label>
-                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="10">
+                        <label for="quantity">Số lượng: <input type="number" name="quantity" id="quantity" value="1" min="1" max="10"></label>
+                        
                         <input type="submit" value="Add to Cart">
                     </form>
                 </div>
-                <?php  include 'select-sql/rating-review.php' ;?>
+                <?php   $laptop_id = sanitize_input($_GET['id']);
+                    function getTotalRatings($laptop_id, $conn) {
+                        $sql = "SELECT COUNT(*) AS total_ratings FROM binh_luan_laptop WHERE laptop_id = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $laptop_id);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $row = $result->fetch_assoc();
+                        return $row['total_ratings'];
+                    }
+
+                    // Function to get the number of ratings for each star value
+                    function getRatingsCount($laptop_id, $rating, $conn) {
+                        $sql = "SELECT COUNT(*) AS rating_count FROM binh_luan_laptop WHERE laptop_id = ? AND rating = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("ii", $laptop_id, $rating);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $row = $result->fetch_assoc();
+                        return $row['rating_count'];
+                    }
+
+
+                        // Assuming $row['id'] contains the laptop_id, replace it with the correct variable name if needed
+                        $laptop_id = $row['id'];
+
+                        // Get the total number of ratings for the laptop
+                        $total_ratings = getTotalRatings($laptop_id, $conn);
+
+                        // Get the number of ratings for each star value
+                        $ratings_5 = getRatingsCount($laptop_id, 5, $conn);
+                        $ratings_4 = getRatingsCount($laptop_id, 4, $conn);
+                        $ratings_3 = getRatingsCount($laptop_id, 3, $conn);
+                        $ratings_2 = getRatingsCount($laptop_id, 2, $conn);
+                        $ratings_1 = getRatingsCount($laptop_id, 1, $conn);
+?>
                 <form class="rating-review">
                     <div class="star-total-total">
                         <h1 class="name-total">Tổng số lượt đánh giá</h1>
@@ -136,16 +176,72 @@
                     </form>
                 </div>
             <?php else : ?>
-                <div class="add-to-cart-form">
+                <div class="product-details-nologin">
+                    <div class="product-image">
+                        <img src="/action/<?php echo $row['image_url']; ?>" alt="<?php echo $row['laptop_name']; ?> Image">
+                    </div>
+                    <div class="laptop_detail">
+                        <form class="product-info-form">
+                            <h1><?php echo $row['laptop_name']; ?></h1>
+                            <p>Hãng: <?php echo $row['brand']; ?></p>
+                            <p>Processor: <?php echo $row['processor']; ?></p>
+                            <p>Screen Size: <?php echo $row['screen_size']; ?></p>
+                            <p>Graphics Card: <?php echo $row['graphics_card']; ?></p>
+                            <p>RAM: <?php echo $row['ram']; ?></p>
+                            <p>Storage Capacity: <?php echo $row['storage_capacity']; ?></p>
+                            <p>Operating System: <?php echo $row['operating_system']; ?></p>
+                            <p>Weight: <?php echo $row['weight']; ?></p>
+                            <p class="status">Status: <?php echo $row['status']; ?></p>
+                            <p>Price Range: <?php echo $row['price_range']; ?> VND</p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="add-to-cart-form-nologin">
                     <form action="/action/add_to_cart.php" method="post">
                         <input type="hidden" name="laptop_id" value="<?php echo $row['id']; ?>">
                         <input type="hidden" name="user_id" value="">
-                        <label for="quantity">Số lượng:</label>
-                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="10" disabled>
+                        <label for="quantity">Số lượng: <input type="number" name="quantity" id="quantity" value="1" min="1" max="10" disabled></label>
+
                         <p>Bạn cần đăng nhập để thêm sản phẩm giỏ hàng</p>
                     </form>
                 </div>
-                <?php  include 'select-sql/rating-review.php' ;?>
+                <?php    $laptop_id = sanitize_input($_GET['id']);
+                    function getTotalRatings($laptop_id, $conn) {
+                        $sql = "SELECT COUNT(*) AS total_ratings FROM binh_luan_laptop WHERE laptop_id = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $laptop_id);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $row = $result->fetch_assoc();
+                        return $row['total_ratings'];
+                    }
+
+                    // Function to get the number of ratings for each star value
+                    function getRatingsCount($laptop_id, $rating, $conn) {
+                        $sql = "SELECT COUNT(*) AS rating_count FROM binh_luan_laptop WHERE laptop_id = ? AND rating = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("ii", $laptop_id, $rating);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $row = $result->fetch_assoc();
+                        return $row['rating_count'];
+                    }
+
+
+                        // Assuming $row['id'] contains the laptop_id, replace it with the correct variable name if needed
+                        $laptop_id = $row['id'];
+
+                        // Get the total number of ratings for the laptop
+                        $total_ratings = getTotalRatings($laptop_id, $conn);
+
+                        // Get the number of ratings for each star value
+                        $ratings_5 = getRatingsCount($laptop_id, 5, $conn);
+                        $ratings_4 = getRatingsCount($laptop_id, 4, $conn);
+                        $ratings_3 = getRatingsCount($laptop_id, 3, $conn);
+                        $ratings_2 = getRatingsCount($laptop_id, 2, $conn);
+                        $ratings_1 = getRatingsCount($laptop_id, 1, $conn);
+ ;?>
 
                 <form class="rating-review">
                     <div class="star-total-total">
@@ -209,7 +305,20 @@
             
             <?php
             // Đường dẫn lấy link truy vấn comment của laptop
-            include 'select-sql/comment.php';
+            function get_comments_with_fullname($laptop_id) {
+                global $conn;
+                $laptop_id = sanitize_input($laptop_id);
+                $sql = "SELECT bl.`id_nguoi_dung`, bl.`rating`, bl.`noi_dung`, u.`full_name` 
+                        FROM `binh_luan_laptop` bl
+                        INNER JOIN `users` u ON bl.`id_nguoi_dung` = u.`user_id`
+                        WHERE bl.`laptop_id` = $laptop_id
+                        ORDER BY bl.`id` DESC";
+                $result = $conn->query($sql);
+                return $result->fetch_all(MYSQLI_ASSOC);
+            }
+
+            // Get comments for the current laptop with full names
+            $comments = get_comments_with_fullname($laptop_id);
             // Display comments
             if (!empty($comments)) {
                 $comments_per_page = 5;
@@ -247,13 +356,12 @@
                 echo '<p>Hiện không có comment nào</p>';
             }
             ?>            
-                        <?php
-                        echo "</div>";
+            <?php
+                echo "</div>";
                     } else {
                         // If no laptop with the given id is found, display an error message or redirect to a 404 page.
                         echo "<p>Không tìm thấy laptop</p>";
                     }
-
                     // Close the database connection
                     $conn->close();
                 } else {
@@ -262,8 +370,6 @@
                 }
                 ?>
     </div>
-
     <footer><?php include "footer.php"; ?></footer>
-
 </body>
 </html>

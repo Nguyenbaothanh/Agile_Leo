@@ -1,21 +1,25 @@
+/* add_khuyen_mai.css */
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
 }
 
 .add-khuyen-mai {
-    width: 400px;
-    margin: 50px auto;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
+    color: #333;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 form {
@@ -25,43 +29,34 @@ form {
 
 label {
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="date"] {
+    padding: 10px;
     margin-bottom: 10px;
-    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-.back_display_km {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #45a049;
-    /* Use a red color (you can change it to your preference) */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+a.back_display_km {
     margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
     text-align: center;
 }
 
-.back_display_km:hover {
-    background-color: #45a049;
-    /* Use a darker shade of red for the hover effect (you can change it) */
+a.back_display_km:hover {
+    text-decoration: underline;
 }
