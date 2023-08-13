@@ -1,12 +1,4 @@
-<?php
-// Kết nối tới cơ sở dữ liệu, thay đổi thông tin kết nối phù hợp với cấu hình của bạn
-include 'connect.php';
 
-// Truy vấn cơ sở dữ liệu để lấy danh sách mã khuyến mãi
-$sql = "SELECT * FROM ma_khuyen_mai";
-$result = $conn->query($sql);
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -15,18 +7,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" type="text/css" href="/css/display_khuyen_mai.css">
 </head>
 <body>
-    <nav class="vertical navigation">
-        <h2 style=color:#fff;>Menu</h2>
-        <ul>
-            <li><a href="/index.php">Trang chủ </a></li>
-            <li><a href="display_users.php">Quản lí người dùng</a></li>
-            <li><a href="display_laptop.php">Quản lí sản phẩm</a></li>
-            <li><a href="display_order.php">Quản lí đơn hàng</a></li>
-            <li><a href="display_khuyen_mai.php">Quản lí mã khuyến mãi</a></li>
-            <li><a href="display_promotions.php">Quản lí chương trình khuyến mãi</a></li>
-
-        </ul>
-    </nav>
+    <?php include_once 'admin_dashboard.php'; ?>
     <div class="content"><h2>Danh sách mã khuyến mãi</h2>
     <a class="add_km" href="add_khuyen_mai.php">Thêm khuyến mãi</a>
     <table>
