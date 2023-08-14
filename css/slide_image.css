@@ -10,13 +10,15 @@ body {
 /* Main Navigation Styles */
 
 #mainnav {
-    background-color:#d52220;
+    background-color: #d52220;
 }
 
 #mainnav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #mainnav ul li {
