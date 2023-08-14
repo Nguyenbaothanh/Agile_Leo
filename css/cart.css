@@ -20,7 +20,7 @@ table td {
 
 table th {
     background-color: #343a40;
-    color:white;
+    color: white;
 }
 
 table tr:nth-child(even) {
@@ -130,6 +130,16 @@ select {
     font-family: Arial, sans-serif;
 }
 
+#promotion_code {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
 
 /* Styling for the payment button */
 
@@ -210,6 +220,7 @@ select {
 p {
     padding-left: 30px;
 }
+
 img {
     border-radius: 50px;
 }

@@ -1,5 +1,4 @@
 <?php
-include 'connect.php';
 
 function getAllPromotionCodes($conn, $totalAmount) {
     $query = "SELECT * FROM ma_khuyen_mai WHERE so_tien_toi_thieu <= ?";
@@ -77,7 +76,7 @@ if (isset($_SESSION['user_id'])) {
         echo "<textarea class='pay-up-input' name='message' placeholder='Lời nhắn'></textarea>";
         echo "<label  for='promotion_code'>Mã khuyến mãi</label>";
         // Promotional code input (dropdown menu)
-        echo "<select class='pay-up-promotion' name='promotion_code'>";
+        echo "<select id='promotion_code'  name='promotion_code'>";
         echo "<option  value=''>Chọn mã khuyến mãi (nếu có)</option>";
         foreach ($promotionCodes as $code) {
             echo "<option value='{$code['id']}'>{$code['ten']} - Giảm {$code['so_tien_khuyen_mai']} VNĐ</option>";
@@ -124,6 +123,7 @@ if (isset($_SESSION['user_id'])) {
 ?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
 function updateTotalAmount() {
     var selectedPromotionID = $('#promotion_code').val();
     var selectedPromotion = promotionCodes.find(code => code.id == selectedPromotionID);
@@ -161,5 +161,6 @@ $(document).ready(function () {
 
 var promotionCodes = <?php echo json_encode(getAllPromotionCodes($conn, $totalAmount)); ?>;
 </script>
+
 
 
