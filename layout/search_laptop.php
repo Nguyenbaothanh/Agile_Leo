@@ -13,7 +13,7 @@
     // index.php
     include_once 'connect.php';
     include_once 'modelsearch.php';
-    include_once 'viewsearch.php';
+    include_once 'view/viewsearch.php';
     include_once 'Controllersearch.php';
 
     $model = new Modelsearch($conn);
