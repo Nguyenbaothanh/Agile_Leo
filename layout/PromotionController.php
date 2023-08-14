@@ -21,7 +21,7 @@ class PromotionController {
         $totalPages = ceil($totalPromotions / $itemsPerPage);
 
         // Gọi view để hiển thị danh sách chương trình khuyến mãi
-        require 'view/show-notifications.php';
+        require 'view/show-promotions.php';
     }
 }
 

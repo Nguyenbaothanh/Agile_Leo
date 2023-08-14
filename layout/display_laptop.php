@@ -53,7 +53,7 @@
                         <td>".$row["image_url"]."</td>
                         <td>
                             <a class='link-edit' href='/action/delete_laptop.php?delete_id=".$row["id"]."'>Xóa</a> |
-                            <a class='link-delete' href='update_laptop.php?id=".$row["id"]."'>Sửa</a></td>
+                            <a class='link-delete' href='edit_laptop_controller.php?id=".$row["id"]."'>Sửa</a></td>
                       </tr>";
             }
 

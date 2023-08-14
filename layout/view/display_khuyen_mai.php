@@ -22,9 +22,8 @@
             <th>Delete</th>
         </tr>
         <?php
-        if ($result->num_rows > 0) {
-            // Xuất dữ liệu từ cơ sở dữ liệu thành bảng HTML
-            while ($row = $result->fetch_assoc()) {
+        if (!empty($allPromotions)) {
+            foreach ($allPromotions as $row) {
                 echo "<tr>";
                 echo "<td>" . $row["id_ma_khuyen_mai"] . "</td>";
                 echo "<td>" . $row["ten_khuyen_mai"] . "</td>";

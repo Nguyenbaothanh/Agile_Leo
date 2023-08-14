@@ -13,7 +13,7 @@ $sql = "UPDATE promotions SET title='$title', content='$content', start_date='$s
 
 if ($conn->query($sql) === TRUE) {
     echo "Cập nhật chương trình khuyến mãi thành công!";
-    echo "<script>window.location = '/layout/display_promotions.php';</script>";
+    echo "<script>window.location = '/layout/display_promotions_controller.php';</script>";
 } else {
     echo "Lỗi: " . $sql . "<br>" . $conn->error;
 }
