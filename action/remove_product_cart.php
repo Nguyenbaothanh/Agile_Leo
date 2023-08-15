@@ -8,9 +8,8 @@ include 'connect.php' ;
     $sql = "DELETE FROM shopping_cart WHERE laptop_id = $delete_laptop_id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Xóa sản phẩm thành công.";
-        header("Location: /layout/cart.php");
-
+        echo '<script>alert("Xóa sản phẩm thành công.");</script>';
+        echo '<script>window.location.href = "/layout/cart.php";</script>';
     } else {
         echo "Lỗi: " . $sql . "<br>" . $conn->error;
         header("Location: /layout/cart.php");

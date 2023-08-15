@@ -39,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO laptops (laptop_name, brand, processor, screen_size, graphics_card, ram, storage_capacity, operating_system,status ,weight, price_range,image_url) VALUES ('$laptop_name', '$brand', '$processor', '$screen_size', '$graphics_card', '$ram', '$storage_capacity', '$operating_system', '$status' ,'$weight', '$price_range','$targetFilePath')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Laptop added successfully!";
-        header("Location: /layout/display_laptop.php");
+        echo '<script>alert("Thêm sản phẩm thành công!");</script>';
+        echo '<script>window.location.href = "/layout/display_laptop.php";</script>';
 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
