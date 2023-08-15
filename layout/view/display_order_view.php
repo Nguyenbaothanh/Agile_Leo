@@ -10,17 +10,17 @@
     <h1>Order Details</h1>
     <table>
         <tr>
-            <th class="order_id">Order ID</th>
-            <th class="user_id">User ID</th>
-            <th>Order Date</th>
-            <th>Promotion Code ID</th>
-            <th>User Name</th>
-            <th>User Address</th>
-            <th>Payment Method</th>
-            <th>Message</th>
-            <th>Total Amount</th>
-            <th>Order Status</th>
-            <th>Action</th>
+            <th class="order_id">Mã đơn hàng đã được đặt</th>
+            <th class="user_id">Mã của người dùng</th>
+            <th>Ngày đặt hàng</th>
+            <th>Mã khuyến mãi</th>
+            <th>Tên người dùng</th>
+            <th>Địa chỉ người dùng</th>
+            <th>Phương thức thanh toán</th>
+            <th>Lời nhắn</th>
+            <th>Tổng tiền cần thanh toán</th>
+            <th>Trạng thái đơn hàng đã được đặt</th>
+            <th>Thao tác</th>
         </tr>
         <?php 
         // Display orders in the table

@@ -41,7 +41,12 @@
                 // Prepare and execute the SQL query to fetch laptop information
                 $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops` WHERE `brand` = ?");
                 $stmt->bind_param("s", $brand);
-            } else {
+            } elseif (isset($_GET['brand']) && $_GET['brand'] === 'all') {
+                // Prepare and execute the SQL query to fetch all laptop information
+                $stmt = $conn->prepare("SELECT `brand`, `laptop_name`, `id`, `processor`, `screen_size`, `graphics_card`, `storage_capacity`, `operating_system`, `ram`, `weight`, `status`, `price_range`, `image_url` FROM `laptops`");
+            } 
+            
+            else {
                 echo "Invalid parameters. Please provide 'brand' and 'processor' or 'brand' and 'laptop_name' values in the URL.";
                 exit;
             }
@@ -108,7 +113,7 @@
                 
                 echo "</div>";           
             } else {
-                echo "<p>No laptops found in the database.</p>";
+                echo "<p>Không ti</p>";
             }
 
             // Close the statement and the database connection
