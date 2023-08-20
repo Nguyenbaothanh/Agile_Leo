@@ -8,6 +8,13 @@ ul {
     padding: 0;
 }
 
+table th:nth-child(1),
+table td:nth-child(1),
+table th:nth-child(3),
+table td:nth-child(3) {
+    display: none;
+}
+
 .link-edit,
 .link-delete {
     text-decoration: none;
