@@ -37,24 +37,28 @@ function fetchLaptops(filterData) {
             const laptopsContainer = document.getElementById("laptopsContainer");
             // Clear previous data
             laptopsContainer.innerHTML = ""; // Clear previous data before appending new data
-            for (let i = startIndex; i < endIndex; i++) {
-                const laptop = data[i];
-                const laptopCard = document.createElement("div");
+            if (data.length > 0) {
+                for (let i = startIndex; i < endIndex; i++) {
+                    const laptop = data[i];
+                    const laptopCard = document.createElement("div");
 
-                // Create an anchor tag linking to the product_details.php page with the laptop ID
-                const laptopLink = document.createElement("a");
-                laptopLink.href = getProductDetailsLink(laptop.id);
+                    // Create an anchor tag linking to the product_details.php page with the laptop ID
+                    const laptopLink = document.createElement("a");
+                    laptopLink.href = getProductDetailsLink(laptop.id);
 
-                // Create the content for the laptop card
-                laptopLink.innerHTML = `
-                <img src="/action/${laptop.image_url}" alt="${laptop.laptop_name}">
-                <h2 class='filter-laptop'>${laptop.laptop_name}</h2>
-                <p class='filter-laptop'> ${laptop.price_range} đ</p>
-            `;
+                    // Create the content for the laptop card
+                    laptopLink.innerHTML = `
+                    <img src="/action/${laptop.image_url}" alt="${laptop.laptop_name}">
+                    <h2 class='filter-laptop'>${laptop.laptop_name}</h2>
+                    <p class='filter-laptop'> ${laptop.price_range} đ</p>
+                `;
 
-                // Append the laptop card to the laptops container
-                laptopCard.appendChild(laptopLink);
-                laptopsContainer.appendChild(laptopCard);
+                    // Append the laptop card to the laptops container
+                    laptopCard.appendChild(laptopLink);
+                    laptopsContainer.appendChild(laptopCard);
+                }
+            } else {
+                laptopsContainer.innerHTML = "Không tìm thấy sản phẩm phù hợp.";
             }
         })
         .catch(error => console.error("Error fetching laptops:", error));

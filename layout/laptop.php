@@ -8,7 +8,7 @@
 </head>
 <body>
 <header><?php include_once 'header.php'; ?></header>
-    <div class="gallery">
+    <main><div class="gallery">
         <?php
             include_once 'connect.php';
 
@@ -113,13 +113,13 @@
                 
                 echo "</div>";           
             } else {
-                echo "<p>Không ti</p>";
+                echo "<p>Không tìm thấy sản phẩm phù hợp</p>";
             }
 
             // Close the statement and the database connection
             $stmt->close();
             $conn->close();
-?></div>
+?></div></main>
     <footer><?php include_once 'footer.php'; ?></footer>
 
 </body>

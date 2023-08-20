@@ -32,7 +32,8 @@
                         echo "<img src='img/laptop.png' alt='Default Image'>";
                     }
                     echo "<p><strong>" . $row['laptop_name'] . "</strong></p>";
-                    echo "<p>" . $row['price_range'] . " đ</p>";
+                    $formatted_price_range = number_format($row['price_range'], 0, '.', ',');
+                    echo "<p>" . $formatted_price_range . " đ</p>";
                     echo "</a>";
                     echo "</div>";
                 }

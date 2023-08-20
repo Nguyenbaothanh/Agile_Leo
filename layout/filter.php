@@ -47,14 +47,17 @@
         <label for="storage_capacity">Dung lượng ổ cứng:</label>
         <select id="storage_capacity" name="storage_capacity">
             <option value="">All</option>
-            <option value="128 GB">128 GB</option>
-            <option value="240 GB">240 GB</option>
-            <option value="256 GB">256 GB</option>
-            <option value="500 GB">500 GB</option>
-            <option value="512 GB">512 GB</option>
-            <option value="1 TB">1 TB</option>
             <option value="2 TB">2 TB</option>
+            <option value="1 TB">1 TB</option>
+            <option value="256GB SSD">256GB SSD</option>
+            <option value="1TB SSD">1TB SSD</option>
+            <option value="512GB SSD">512GB SSD</option>
+            <option value="32GB eMMC">32GB eMMC</option>
             <option value="4 TB">4 TB</option>
+            <option value="64GB eMMC">64GB eMMC</option>
+            <option value="1TB + 1TB SSD">1TB + 1TB SSD</option>
+            <option value="128GB SSD">128GB SSD</option>
+            <!-- Add any other storage capacity options here -->
         </select>
         <br>
         <button type="submit">Filter</button>

@@ -37,6 +37,8 @@
                     </tr>";
 
             while ($row = $result->fetch_assoc()) {
+                $formatted_price_range = number_format($row["price_range"], 0, '.', ',');
+
                 echo "<tr>
                         <td class='hidden'>".$row["id"]."</td>
                         <td>".$row["laptop_name"]."</td>
@@ -49,7 +51,7 @@
                         <td>".$row["operating_system"]."</td>
                         <td>".$row["weight"]."</td>
                         <td>".$row["status"]."</td>
-                        <td>".$row["price_range"]."</td>
+                        <td>".$formatted_price_range."</td>
                         <td>".$row["image_url"]."</td>
                         <td>
                             <a class='link-edit' href='/action/delete_laptop.php?delete_id=".$row["id"]."'>Xóa</a> |
