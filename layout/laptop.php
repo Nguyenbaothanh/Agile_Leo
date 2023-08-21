@@ -47,7 +47,7 @@
             } 
             
             else {
-                echo "Invalid parameters. Please provide 'brand' and 'processor' or 'brand' and 'laptop_name' values in the URL.";
+                echo "Không tìm thấy sản phẩm phù hợp";
                 exit;
             }
 

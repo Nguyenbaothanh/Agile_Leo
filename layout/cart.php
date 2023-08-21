@@ -72,7 +72,7 @@
             echo "<p id='totalPriceDisplay'>Tổng Tiển: $totalPrice</p>";
             echo "</div>";
         } else {
-            echo "<p>Your shopping cart is empty.</p>";
+            echo "<p>Giỏ hàng của bạn đang trống.</p>";
         }
     } else {
         echo "<p>User not logged in. Please log in to view the shopping cart.</p>";

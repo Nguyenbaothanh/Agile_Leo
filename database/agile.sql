@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 01, 2023 lúc 06:15 AM
+-- Thời gian đã tạo: Th8 21, 2023 lúc 07:18 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -36,22 +36,6 @@ CREATE TABLE `binh_luan_laptop` (
   `ngay_binh_luan` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Đang đổ dữ liệu cho bảng `binh_luan_laptop`
---
-
-INSERT INTO `binh_luan_laptop` (`id`, `id_nguoi_dung`, `laptop_id`, `rating`, `noi_dung`, `ngay_binh_luan`) VALUES
-(1, 11, 0, 5, '', '2023-07-27'),
-(2, 11, 0, 5, '', '2023-07-27'),
-(3, 11, 16, 5, 'd', '2023-07-27'),
-(4, 11, 17, 5, 'd', '2023-07-27'),
-(5, 11, 17, 5, 'd', '2023-07-27'),
-(6, 11, 17, 5, 'd', '2023-07-27'),
-(7, 11, 17, 5, 'm', '2023-07-27'),
-(8, 11, 17, 5, 'd', '2023-07-27'),
-(9, 11, 17, 5, 'dd', '2023-07-27'),
-(10, 11, 12, 5, '14', '2023-08-01');
-
 -- --------------------------------------------------------
 
 --
@@ -71,35 +55,23 @@ CREATE TABLE `laptops` (
   `weight` decimal(5,1) NOT NULL,
   `status` enum('Còn hàng','Liên hệ') NOT NULL,
   `price_range` decimal(10,0) NOT NULL,
-  `image_url` varchar(255) NOT NULL
+  `image_url` varchar(255) NOT NULL,
+  `time_click_laptop` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `laptops`
 --
 
-INSERT INTO `laptops` (`id`, `laptop_name`, `brand`, `processor`, `screen_size`, `graphics_card`, `ram`, `storage_capacity`, `operating_system`, `weight`, `status`, `price_range`, `image_url`) VALUES
-(12, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(13, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(14, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(15, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(16, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(17, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(18, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(19, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-9.jpg'),
-(20, 'sadasd', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-mua-thu-la-vang-12.jpg'),
-(24, '1231l', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 2, 'img/hinh-anh-con-mua-dep-9.jpg'),
-(25, '1231l', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 1.0, 'Còn hàng', 0, 'img/hinh-nen-dep-may-tinh-89.jpg'),
-(35, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'HP', 'Core i3', '14.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 0.1, 'Còn hàng', 1000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(36, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 0.1, 'Còn hàng', 40000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(37, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 1000.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(38, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 1000.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(39, '6000', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 1000.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(40, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 1000.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(41, 'Laptop Lenovo IdeaPad 3 14ITL6 82H701G0US', 'Lenovo', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(42, 'Laptop MSI Modern 15 B7M 099VN | 231VN', 'MSI', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 0.1, 'Còn hàng', 2000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(43, 'Laptop HP VICTUS 16-e1107AX 7C140PA', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 2.0, 'Còn hàng', 6000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg'),
-(44, 'ms', 'Asus', 'Intel Celeron', '10.5 inch', 'Intel HD Graphics', '4GB', '2 TB', 'Windows 10', 0.1, 'Còn hàng', 1000, 'img/6659_hp_victus_16_e1107ax_7c140pa_kjl.jpg');
+INSERT INTO `laptops` (`id`, `laptop_name`, `brand`, `processor`, `screen_size`, `graphics_card`, `ram`, `storage_capacity`, `operating_system`, `weight`, `status`, `price_range`, `image_url`, `time_click_laptop`) VALUES
+(65, 'Laptop Asus TUF Dash F15 FX517ZC-HN077W (I5-12450H/ 8GB/ 512GB SSD/ 15.6FHD-144Hz/ RTX3050 4GB/ Win1', 'Asus', 'Core i5', '15.6 inch', 'RTX 3050', '8GB', '512GB SSD', 'Windows 11', 2.0, 'Còn hàng', 19990000, 'img/250-21939-asus-tuf-dash-f15.png', '0000-00-00 00:00:00'),
+(66, 'Laptop Asus TUF Dash F15 FX517ZC-HN079W (i5-12450H/ 8GB RAM/ 512GB SSD/ RTX 3050 4GB/ 15.6-inch FHD/', 'Asus', 'Core i5', '15.6 inch', 'Intel HD Graphics', '8GB', '512GB SSD', 'Windows 11', 2.0, 'Còn hàng', 19990000, 'img/250-22016-asus-tuf-dash-f15-fx517zc-hn079w.png', '0000-00-00 00:00:00'),
+(67, 'Laptop ASUS TUF Gaming A15 FA507NU-LP034W (Ryzen 7-7735HS/ 8GB RAM/ 512GB SSD/ RTX 4050 6GB / 15.6\" ', 'Asus', 'Ryzen 7', '15.6 inch', 'RTX 3050', '8GB', '512GB SSD', 'Windows 11', 2.2, 'Còn hàng', 29790000, 'img/250-24882-laptop-asus-tuf-gaming-a15-fa507nu-lp034w-13.jpg', '0000-00-00 00:00:00'),
+(69, 'Laptop ASUS ROG Flow Z13 GZ301VU-MU301W (Core i9-13900H / 16GB RAM/ 1TB SSD/ RTX 4050 6GB / 13.4\" WU', 'Asus', 'Core i9', '13.4 inch', 'RTX 4050 6GB', '16GB', '1 TB', 'Windows 11', 1.2, 'Còn hàng', 53990000, 'img/250-24952-laptop-asus-rog-flow-z13-gz301vu-mu301w-11.jpg', '0000-00-00 00:00:00'),
+(70, 'Laptop Asus ROG Zephyrus G14 GA402NJ-L4056W (AMD Ryzen 7 7735HS/ 16GB Ram/ 512GB/ RTX 3050/ 14 \"FHD/', 'Asus', 'Ryzen 7', '14.0 inch', 'Intel HD Graphics', '16GB', '512GB SSD', 'Windows 11', 1.7, 'Còn hàng', 40990000, 'img/250-24986-laptop-asus-rog-zephyrus-g14-ga402nj-l4056w-8.jpg', '0000-00-00 00:00:00'),
+(71, 'Laptop HP Pavilion 14 X360 (EK0013DX) 2in1 (Intel i3-1215U/ Ram 8GB/ SSD 256GB/ 14\"FHD IPS Touch/ Wi', 'HP', 'Core i3', '14.0 inch', 'Intel UHD Graphics', '8GB', '256GB SSD', 'Windows 11', 1.5, 'Còn hàng', 11900000, 'img/250-25459-hp-x360.png', '0000-00-00 00:00:00'),
+(72, 'HP ENVY x360 2-in-1 15-FH0013DX (RYZEN 5 7530U/ 8GB/ 256GB/ AMD Radeon/ 15.6″ Full HD Touch) NK BH t', 'HP', 'Ryzen 5', '15.6 inch', 'AMD Radeon', '8GB', '256GB SSD', 'Windows 11', 2.0, 'Còn hàng', 14990000, 'img/250-25319-hp-envy-x360-2-in-1-15-fh0013dx.png', '0000-00-00 00:00:00'),
+(73, '[Tặng Ram Laptop 8GB] Laptop HP Gaming Victus 15 FA0031DX 68U87UA (i5-12450H/ 8GB/ 512GB / GTX 1650/', 'HP', 'Core i5', '15.6 inch', 'GTX 1650', '8GB', '512GB SSD', 'Windows 11', 2.2, 'Còn hàng', 15990000, 'img/250-24731-gaming-victus.jpg', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -121,13 +93,7 @@ CREATE TABLE `ma_khuyen_mai` (
 --
 
 INSERT INTO `ma_khuyen_mai` (`id_ma_khuyen_mai`, `ten_khuyen_mai`, `so_tien_toi_thieu`, `ngay_bat_dau`, `ngay_het_han`, `so_tien_khuyen_mai`) VALUES
-(1, 'SUMMER102', 50000, '2023-08-01', '2023-08-31', 10000),
-(2, 'FALL20', 100000, '2023-09-01', '2023-09-30', 20000),
-(4, 'Promo1', 1, '2023-08-01', '2023-08-31', 2),
-(5, 'Promo2', 2, '2023-08-15', '2023-09-15', 3),
-(6, 'Promo3', 3, '2023-09-01', '2023-09-30', 3),
-(7, 'Promo4', 3, '2023-09-15', '2023-10-15', 3),
-(8, 'Promo20', 2, '2023-12-01', '2023-12-31', 1);
+(11, 'Mã khuyến mãi tựu trường', 500000, '2023-08-23', '2023-08-31', 20000);
 
 -- --------------------------------------------------------
 
@@ -156,7 +122,10 @@ INSERT INTO `orders` (`order_id`, `user_id`, `order_date`, `total_amount`, `prom
 (1, 2, '2023-07-31 22:14:53', 0, 0, 'admin123', '456 Admin Avenue', 'credit_card', '', 'Shipped'),
 (3, 2, '2023-07-31 17:48:10', 1, 8, 'admin123', '456 Admin Avenue', 'credit_card', '12', 'Confirmed'),
 (4, 11, '2023-08-01 05:59:58', 2, 0, 'user123', 'ghenhot12@gmail.com', 'credit_card', '4', 'pending'),
-(5, 11, '2023-08-01 06:03:29', 4, 0, 'user123', 'ghenhot12@gmail.com', 'credit_card', '', 'pending');
+(5, 11, '2023-08-01 06:03:29', 4, 0, 'user123', 'ghenhot12@gmail.com', 'credit_card', '', 'pending'),
+(7, 2, '2023-08-14 09:55:27', 4, 0, 'admin123', '456 Admin Avenue', 'credit_card', '', 'pending'),
+(8, 2, '2023-08-14 09:56:24', 1, 8, 'admin123', '456 Admin Avenue', 'paypal', '', 'pending'),
+(9, 2, '2023-08-21 07:18:15', 19970000, 11, 'admin123', '456 Admin Avenue', 'cash_on_delivery', '', 'pending');
 
 -- --------------------------------------------------------
 
@@ -178,7 +147,7 @@ CREATE TABLE `promotions` (
 --
 
 INSERT INTO `promotions` (`id_promotions`, `title`, `content`, `image_path`, `start_date`, `end_date`) VALUES
-(1, 'He', 'ad', 'img/hinh-nen-4k-bai-bien-nguyen-scaled.jpg', '2023-05-30', '2023-07-30');
+(6, 'Khuyến mãi tựu trường ', 'Chào mừng bạn đến với chương trình khuyến mãi \"Tựu Trường - Mua Laptop\"! Dưới đây là những ưu đãi hấp dẫn mà chúng tôi mang đến cho bạn khi mua laptop tại cửa hàng của chúng tôi:\r\n\r\n1. Giảm giá đặc biệt cho sinh viên và học sinh:\r\nChúng tôi hiểu rằng học tập là quan trọng, vì vậy chúng tôi cung cấp mức giảm giá đặc biệt cho sinh viên và học sinh khi mua bất kỳ laptop nào trong cửa hàng. Chỉ cần đưa thẻ học hoặc giấy tờ xác nhận tình trạng học tập để nhận ưu đãi này.\r\n\r\n2. Tặng phần quà hấp dẫn:\r\nKhi mua laptop tại cửa hàng, bạn sẽ được nhận một bộ quà tặng hấp dẫn kèm theo, bao gồm túi đựng laptop, chuột không dây, bàn di chuột và bộ vệ sinh laptop. Đây là những phụ kiện cần thiết để bạn có thể sử dụng laptop một cách tiện lợi và bảo vệ thiết bị của mình.\r\n\r\n3. Hỗ trợ trả góp linh hoạt:\r\nĐể giúp bạn tiếp cận dễ dàng với công nghệ mới, chúng tôi cung cấp chương trình trả góp linh hoạt với lãi suất ưu đãi. Bạn có thể chọn phương thức trả góp phù hợp với tình hình tài chính của mình và sở hữu ngay chiếc laptop mà bạn mong muốn.\r\n\r\n4. Bảo hành và dịch vụ sau bán hàng:\r\nChúng tôi cam kết cung cấp dịch vụ bảo hành chất lượng cao cùng với chế độ hỗ trợ sau bán hàng tận tâm. Đội ngũ kỹ thuật của chúng tôi luôn sẵn sàng giúp đỡ bạn trong quá trình sử dụng laptop, từ cài đặt phần mềm đến xử lý sự cố kỹ thuật.\r\n\r\n5. Quà tặng đặc biệt cho đơn hàng đầu tiên:\r\nĐối với những khách hàng đầu tiên tham gia chương trình, chúng tôi dành tặng một phiếu mua hàng trị giá 500.000 VND, áp dụng cho lần mua laptop tiếp theo. Đây là cơ hội để bạn tiết kiệm hơn nữa khi nâng cấp hoặc mua sắm thêm.', 'img/z4622420130170_8adc5adc1c1a04a8ee3a8b6a5590b38a.jpg', '2023-08-01', '2023-09-02');
 
 -- --------------------------------------------------------
 
@@ -216,9 +185,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `full_name`, `sex`, `email`, `address`, `type`) VALUES
-(2, 'admin123', 'adminpassword', 'Admin Smith1', 'Male', 'admin@example.com', '456 Admin Avenue', 'admin'),
-(11, 'user123', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho1222@gmail.com2', 'ghenhot12@gmail.com', 'user'),
-(12, 'user123222', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho12@gmail.com222', '295 Phạm Thế Hiển Phường 3 Quận 8', 'user');
+(2, 'admin123', 'adminpassword', 'Admin Smith12', 'Male', 'admin@example.com', '456 Admin Avenue', 'admin'),
+(11, 'ghenho12@gmail.com', 'userpassword', 'ggggggggggggggg', 'Male', 'ghenho1222@gmail.com2', 'ghenhot12@gmail.com', 'user'),
+(14, 'ghenhot122', '123456', 'John Doe1', 'Male', 'ghenho122@gmail.com2', '295 Phạm Thế Hiển Phường 3 Quận 8', 'user');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -277,13 +246,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `binh_luan_laptop`
 --
 ALTER TABLE `binh_luan_laptop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `laptops`
 --
 ALTER TABLE `laptops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT cho bảng `ma_khuyen_mai`
@@ -295,25 +264,25 @@ ALTER TABLE `ma_khuyen_mai`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `promotions`
 --
 ALTER TABLE `promotions`
-  MODIFY `id_promotions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_promotions` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
