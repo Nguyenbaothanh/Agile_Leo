@@ -79,7 +79,7 @@
     }
     ?>
         <!-- HTML -->
-    <button class="paymentButton" onclick="openmodalpay('cart')">Proceed to Payment</button>
+    <button class="paymentButton" onclick="openmodalpay('cart')">Thanh Toán</button>
     <div id="modal-cart" class="modal-pay">
         <div class="modal-content-pay">
     <?php include 'pay-up.php' ?>

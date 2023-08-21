@@ -60,7 +60,7 @@
             <!-- Add any other storage capacity options here -->
         </select>
         <br>
-        <button type="submit">Filter</button>
+        <button type="submit">Lọc</button>
     </form>
 
     <div id="laptopsContainer">

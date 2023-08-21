@@ -47,7 +47,7 @@ function updateTotalPrice() {
 
     // Update the total price displayed on the page
     const totalPriceDisplay = document.getElementById('totalPriceDisplay');
-    totalPriceDisplay.textContent = isNaN(totalPrice) ? "Total Price: NaN" : `Total Price: ${totalPrice.toFixed(0)}`;
+    totalPriceDisplay.textContent = isNaN(totalPrice) ? "Tổng tiền: NaN" : `Tổng tiền: ${totalPrice.toFixed(0)}`;
 }
 
 // Event listener to handle the quantity button clicks
