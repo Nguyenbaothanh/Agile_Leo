@@ -35,16 +35,16 @@
     <main><h1>Danh sách đơn hàng của bạn</h1>
     <table>
         <tr>
-            <th>Order ID</th>
-            <th>User ID</th>
-            <th>Order Date</th>
-            <th>Total Amount</th>
-            <th>Promotion Code ID</th>
-            <th>User Name</th>
-            <th>User Address</th>
-            <th>Payment Method</th>
-            <th>Message</th>
-            <th>Order Status</th>
+            <th>Mã đơn hàng</th>
+            <th>Mã người dùng</th>
+            <th>Ngày đặt</th>
+            <th>Tổng tiền</th>
+            <th>Mã khuyến mãi</th>
+            <th>Tên người dùng</th>
+            <th>Địa chỉ người dùng</th>
+            <th>Phương thức thanh toán</th>
+            <th>Lời ghi chú khi đặt hàng</th>
+            <th>Trạng thái đơn hàng</th>
         </tr>
         <?php
         // Start the session if not already started

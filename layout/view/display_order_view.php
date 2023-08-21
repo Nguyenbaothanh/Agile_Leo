@@ -7,7 +7,7 @@
 <body>
     <?php include_once 'admin_dashboard.php'; ?>
 
-    <h1>Order Details</h1>
+    <h1>Danh sách đơn hàng đã đặt</h1>
     <table>
         <tr>
             <th class="order_id">Mã đơn hàng đã được đặt</th>
@@ -20,7 +20,7 @@
             <th>Lời nhắn</th>
             <th>Tổng tiền cần thanh toán</th>
             <th>Trạng thái đơn hàng đã được đặt</th>
-            <th>Thao tác</th>
+            <th>Cập nhật trạng thái đơn hàng đã được đặt</th>
         </tr>
         <?php 
         // Display orders in the table
@@ -38,10 +38,11 @@
                 echo "<td>" . $row["total_amount"] . "</td>";
                 echo "<td>" . $row["order_status"] . "</td>";
                 echo "<td>";
-                echo "<button onclick=\"changeOrderStatus('confirm', " . $row["order_id"] . ")\">Confirm</button>";
-                echo "<button onclick=\"changeOrderStatus('ship', " . $row["order_id"] . ")\">Ship</button>";
-                echo "<button onclick=\"changeOrderStatus('complete', " . $row["order_id"] . ")\">Complete</button>";
-                echo "<button onclick=\"changeOrderStatus('cancel', " . $row["order_id"] . ")\">Cancel</button>";
+                echo "<button id=\"confirmButton-" . $row["order_id"] . "\" onclick=\"changeOrderStatus('confirm', " . $row["order_id"] . ")\">Xác nhận</button>";
+                echo "<button id=\"shipButton-" . $row["order_id"] . "\" onclick=\"changeOrderStatus('ship', " . $row["order_id"] . ")\">Vận chuyển</button>";
+                echo "<button id=\"completeButton-" . $row["order_id"] . "\" onclick=\"changeOrderStatus('complete', " . $row["order_id"] . ")\">Hoàn thành</button>";
+                echo "<button id=\"cancelButton-" . $row["order_id"] . "\" onclick=\"changeOrderStatus('cancel', " . $row["order_id"] . ")\">Xóa đơn</button>";
+
                 echo "</td>";
                 echo "</tr>";
             }

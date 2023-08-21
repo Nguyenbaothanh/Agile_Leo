@@ -8,9 +8,9 @@
 <body>
     <header><?php include 'header.php';?></header>
     <main><form id="filterForm">
-        <label for="brand">Brand:</label>
+        <label for="brand">Hãng:</label>
         <select id="brand" name="brand">
-            <option value="">All</option>
+            <option value="">Tất cả</option>
             <option value="Asus">Asus</option>
             <option value="Msi">Msi</option>
             <option value="HP">HP</option>
@@ -24,9 +24,9 @@
             <option value="Huawei">Huawei</option>
         </select>
         <br>
-        <label for="processor">Processor:</label>
+        <label for="processor">CPU:</label>
         <select id="processor" name="processor">
-            <option value="">All</option>
+            <option value="">Tất cả</option>
             <option value="Core i3">Core i3</option>
             <option value="Core i5">Core i5</option>
             <option value="Core i7">Core i7</option>
@@ -35,7 +35,7 @@
         <br>
         <label for="ram">Ram:</label>
         <select id="ram" name="ram">
-            <option value="">All</option>
+            <option value="">Tất cả</option>
             <option value="4GB">4GB</option>
             <option value="8GB">8GB</option>
             <option value="16GB">16GB</option>
@@ -46,7 +46,7 @@
         <br>
         <label for="storage_capacity">Dung lượng ổ cứng:</label>
         <select id="storage_capacity" name="storage_capacity">
-            <option value="">All</option>
+            <option value="">Tất cả</option>
             <option value="2 TB">2 TB</option>
             <option value="1 TB">1 TB</option>
             <option value="256GB SSD">256GB SSD</option>
