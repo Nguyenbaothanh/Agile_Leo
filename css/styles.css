@@ -12,12 +12,12 @@
     border: hidden;
     border-radius: 8px;
     /* Reduced width to accommodate the gap */
-    height: 380px;
+    height: 450px;
     box-sizing: border-box;
     padding: 10px;
     float: left;
     margin: 1%;
-    box-shadow: 0 1px 4px 0; 
+    box-shadow: 0 1px 4px 0;
     /* Adding a 1% margin to create space between laptops */
 }
 
