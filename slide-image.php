@@ -8,7 +8,7 @@
     <!-- form danh muc tim kiem -->
     <div id="mainnav">
         <ul>
-        <li class="thefirst"><a href="/layout/laptop.php?brand=all">LAPTOP MỚI CHÍNH HÃNG</a>
+        <li class="thefirst"><a href="/layout/laptop.php?brand=*">LAPTOP MỚI CHÍNH HÃNG</a>
                         <ul class="sub-menu">
                     <li><a  href="/layout/laptop.php?brand=asus">Asus</a>
                         <ul class="sub-menu2">
