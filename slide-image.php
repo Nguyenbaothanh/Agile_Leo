@@ -39,7 +39,7 @@
                             <li><a href="/layout/laptop.php?brand=asus&laptop_name=Vivobook">Dell Precision</a></li>
                         </ul>
                     </li>
-                    <li><a href="/layout/laptop.php?brand=Dell">Lenovo</a>
+                    <li><a href="/layout/laptop.php?brand=Lenovo">Lenovo</a>
                         <ul class="sub-menu2">
                             <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Lenovo Core i3</a></li>
                             <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Lenovo Core i5</a></li>

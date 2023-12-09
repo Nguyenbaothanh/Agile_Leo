@@ -57,7 +57,7 @@
                 }
                 echo "</div>";
             } else {
-                echo "<p>No laptops found in the database.</p>";
+                echo "<p>Hiện không có Laptop Nào</p>";
             }
             ?>
         </div>
