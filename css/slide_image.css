@@ -1,24 +1,114 @@
-/* Global Styles */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* CSS cho slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 600px;
+    height: 400px;
+    /* Maintain the aspect ratio of the images */
+}
+/* Thêm hiệu ứng fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
 
-/* Main Navigation Styles */
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+/* Nút chuyển đổi slide */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Hiệu ứng hover cho nút */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Nút next sẽ nằm bên phải */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hiệu ứng hover cho nút trước */
+.prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hiệu ứng hover cho nút next */
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hiển thị số slide */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Hiển thị text trên slide */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Thêm hiệu ứng nếu slide hiện đang được chọn */
+.dot.active {
+    background-color: #717171;
+}
+
+/* Bố cục và thiết kế cho form danh mục tim kiếm */
 #mainnav {
-    background-color: #d52220;
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #mainnav ul {
-    list-style-type: none;
+    
+    list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    position: relative;
+    
 }
 
 #mainnav ul li {
@@ -28,132 +118,45 @@ body {
 
 #mainnav ul li a {
     display: block;
-    color: white;
-    padding: 15px 20px;
+    padding: 10px 15px;
+    color: #333;
     text-decoration: none;
 }
 
-#mainnav ul li:hover {
-    background-color: #f1514f;
+#mainnav ul li:hover > a {
+    background: #f4f4f4;
 }
 
-
-/* Sub-Menu Styles */
-
-#mainnav ul li ul.sub-menu {
+#mainnav ul ul {
     display: none;
     position: absolute;
-    background-color: #d52220;
-    z-index: 1;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 9999;
+}
+
+#mainnav ul ul li {
+    display: block;
     width: 200px;
 }
 
-#mainnav ul li:hover ul.sub-menu {
+#mainnav ul ul li a {
+    padding: 10px 15px;
+    color: #333;
     display: block;
 }
 
-#mainnav ul li ul.sub-menu li {
-    display: block;
+#mainnav ul ul li:hover > a {
+    background: #f4f4f4;
 }
 
-#mainnav ul li ul.sub-menu li a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-#mainnav ul li ul.sub-menu li:hover {
-    background-color: #f1514f;
-}
-
-
-/* Sub-Sub-Menu Styles */
-
-#mainnav ul li ul.sub-menu li ul.sub-menu2 {
-    display: none;
-    position: absolute;
-    background-color: #d52220;
-    z-index: 1;
+#mainnav ul ul ul {
     top: 0;
     left: 100%;
-    width: 200px;
 }
 
-#mainnav ul li ul.sub-menu li:hover ul.sub-menu2 {
+#mainnav ul li:hover > ul {
     display: block;
-}
-
-#mainnav ul li ul.sub-menu li ul.sub-menu2 li {
-    display: block;
-}
-
-#mainnav ul li ul.sub-menu li ul.sub-menu2 li a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-#mainnav ul li ul.sub-menu li ul.sub-menu2 li:hover {
-    background-color: #f1514f;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    /* Adjust this value to set the maximum width of the slideshow */
-    margin: 0 auto;
-    /* Center the slideshow horizontally */
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 600px;
-    height: 400px;
-    /* Maintain the aspect ratio of the images */
-}
-
-
-/* Slideshow Navigation Styles */
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    font-size: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.next {
-    right: 0;
-}
-
-
-/* Add some hover effects for the navigation buttons */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-
-/* Add a fade-in effect for the slides */
-
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }

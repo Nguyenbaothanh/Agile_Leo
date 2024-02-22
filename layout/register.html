@@ -1,7 +1,7 @@
 <link rel="stylesheet"href="/css/register.css">
-
 <h2>Register</h2>
 <form action="/action/process_register.php" method="post">
+    <button onclick="closeModal('register')">X</button>
     <h1>Đăng ký tài khoản</h1>
         <label for="username">Tên đăng nhập:</label>
         <input type="text" id="username" name="username" required>
@@ -25,7 +25,5 @@
         <input type="text" id="address" name="address">
         <br>
         <input type="submit" value="Đăng ký">
-
-
 </form>
-<button onclick="closeModal('register')">X</button>
+

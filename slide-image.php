@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Slideshow</title>
-<link rel="stylesheet" href="/css/slide_image.css">
+    <link rel="stylesheet" href="/css/slide_image.css">
 </head>
+
 <body>
     <!-- form danh muc tim kiem -->
     <div id="mainnav">
         <ul>
-        <li class="thefirst"><a href="/layout/laptop.php?brand=*">LAPTOP MỚI CHÍNH HÃNG</a>
-                        <ul class="sub-menu">
-                    <li><a  href="/layout/laptop.php?brand=asus">Asus</a>
+            <li class="thefirst"><a href="/layout/laptop.php?brand=*">LAPTOP MỚI CHÍNH HÃNG</a>
+                <ul class="sub-menu">
+                    <li><a href="/layout/laptop.php?brand=asus">Asus</a>
                         <ul class="sub-menu2">
                             <li><a href="/layout/laptop.php?brand=asus&processor=core i3">Asus Core i3</a></li>
                             <li><a href="/layout/laptop.php?brand=asus&processor=core i5">Asus Core i5</a></li>
@@ -80,8 +82,10 @@
                     </li>
                     <li><a href="/layout/laptop.php?brand=Macbook">Macbook</a>
                         <ul class="sub-menu2">
-                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Air 2020">Macbook Air 2020</a></li>
-                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Pro 2020">Macbook Pro 2020</a></li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Air 2020">Macbook Air 2020</a>
+                            </li>
+                            <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Pro 2020">Macbook Pro 2020</a>
+                            </li>
                             <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Air M1">Macbook Air M1</a></li>
                             <li><a href="/layout/laptop.php?brand=Macbook&laptop_name=Pro M1">Macbook Pro M1</a></li>
                         </ul>
@@ -100,21 +104,27 @@
                     </li>
                     <li><a href="/layout/laptop.php?brand=Samsung">Samsung</a>
                         <ul class="sub-menu2">
-                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Flex">Samsung Galaxy Book Flex</a></li>
-                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Ion">Samsung Galaxy Book Ion</a></li>
-                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book S">Samsung Galaxy Book S</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Flex">Samsung Galaxy
+                                    Book Flex</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book Ion">Samsung Galaxy
+                                    Book Ion</a></li>
+                            <li><a href="/layout/laptop.php?brand=Samsung&laptop_name=Galaxy Book S">Samsung Galaxy Book
+                                    S</a></li>
                         </ul>
                     </li>
                     <li><a href="/layout/laptop.php?brand=Huawei">Huawei</a>
                         <ul class="sub-menu2">
-                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook X Pro">Huawei MateBook X Pro</a></li>
-                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook 13">Huawei MateBook 13</a></li>
-                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook D">Huawei MateBook D</a></li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook X Pro">Huawei MateBook X
+                                    Pro</a></li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook 13">Huawei MateBook 13</a>
+                            </li>
+                            <li><a href="/layout/laptop.php?brand=Huawei&laptop_name=MateBook D">Huawei MateBook D</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </li>
- 
+
         </ul>
     </div>
     <div class="slideshow-container">
@@ -134,11 +144,13 @@
         <!-- Thêm nút trước và sau -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div></div>
-    
+    </div>
+
+
 
     <script src="/js/slide-image.js">
 
     </script>
 </body>
+
 </html>
